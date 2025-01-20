@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               {/* Content */}
               <h6 className="text-uppercase fw-bold mb-4">
-                <GiAngularSpider /> Company name
+                 Company name
               </h6>
               <p>
                 Here you can use rows and columns to organize your footer
