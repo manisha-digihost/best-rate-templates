@@ -11,7 +11,7 @@ const About = () => {
           <Row>
             <Col lg={6}>
               <div className="img-container">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTahXOZObqXMdxgo4nZ8FJg3F_1RNBcAifjLg&s" alt="" />     
+                {/* <img src="" alt="" />      */}
               </div>
             </Col>
             <Col lg={6}>
