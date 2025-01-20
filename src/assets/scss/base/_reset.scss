@@ -85,38 +85,8 @@ p {
   position: relative;
 }
 
-@media (min-width: $lg-breakpoint) {
-  .container {
-    width: 100%;
-    padding: 0 100px;
-  }
 
-  .container-fluid {
-    width: 100%;
-    padding: 0 40px;
-  }
-}
 
-@media (max-width: $lg-breakpoint) {
-  .container {
-    width: 100%;
-    padding: 0 50px;
-  }
 
-  .container-fluid {
-    width: 100%;
-    padding: 0 30px;
-  }
-}
 
-@media (max-width: $md-breakpoint) {
-  .container {
-    width: 100%;
-    padding: 0 30px;
-  }
 
-  .container-fluid {
-    width: 100%;
-    padding: 0 20px;
-  }
-}

@@ -1,0 +1,31 @@
+.about{
+    padding: 70px 0;
+    .about-content{
+        @media (max-width:786px) {
+            margin-top: 15px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        p{
+            color: #000;
+        }
+        h2{
+            font-weight: 600;
+            font-size: 40px;
+            margin-bottom: 15px;
+            @media (max-width:430px){
+                font-size: 32px;
+            }
+        }
+    }
+    .img-container{
+        img{
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+   
+}
