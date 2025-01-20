@@ -13,11 +13,12 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#home">USPS</Nav.Link>
+            {/* <Nav.Link href="#home">USPS</Nav.Link> */}
             <Nav.Link href="#home">About</Nav.Link>
-            <Nav.Link href="#home">Product</Nav.Link>
+            <Nav.Link href="#home">Products</Nav.Link>
             <Nav.Link href="#home">Testimonials</Nav.Link>
             <Nav.Link href="#home">Gallery</Nav.Link>
+            <Nav.Link href="#home">Contact Us</Nav.Link>
             {/* <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

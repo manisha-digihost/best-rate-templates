@@ -148,7 +148,7 @@ const Footer = () => {
       >
         © 2025 Copyright:{" "}
         <a className="text-reset fw-bold" href="https://www.digihost.in/">
-          Diigiihost
+          Best Rate Website
         </a>
       </div>
       {/* Copyright */}
