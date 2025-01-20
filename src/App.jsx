@@ -1,12 +1,13 @@
 import React from "react";
 import Template from "./pages/Template";
-import Navbar from "./layout/Navbar";
+// import Header from "./layout/Hea";
 import Footer from "./layout/Footer";
+import Header from "./layout/Header";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
+      <Header />
       <Template />
       <Footer />
     </div>
