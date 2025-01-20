@@ -1,6 +1,6 @@
 import React from "react";
 import Template from "./pages/Template";
-import Navbar from "./components/Navbar";
+import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
 
 const App = () => {
