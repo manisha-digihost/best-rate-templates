@@ -1,4 +1,5 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Hero from "../components/Hero";
 import USPS from "../components/USPS";
 import About from "../components/About";
