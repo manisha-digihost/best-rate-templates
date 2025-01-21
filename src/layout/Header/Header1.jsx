@@ -24,7 +24,7 @@ const Header1 = () => {
             </NavDropdown>
             <Link to="#contact" className="mx-2 nav-link">Contact</Link>
             {/* <Link to="/">Template</Link> */}
-            <Link to="/" className="mx-2 nav-link">Template2</Link>
+            <Link to="/" className="mx-2 nav-link">Template1</Link>
           </Nav>
           <div className="d-flex">
             <button className="btn btn-primary rounded-pill px-4">Get Started</button>
