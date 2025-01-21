@@ -2,65 +2,73 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Testimonials = () => {
   const settings = {
-    centerMode: true,
-    centerPadding: "40px",
     dots: true,
-    slidesToShow: 3,
     infinite: true,
-    arrows: false,
-    lazyLoad: "ondemand",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          centerMode: false,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
+  const testimonials = [
+    {
+      name: "John Smith",
+      text: "Best-Rate has completely transformed how I manage my finances. Their expert guidance and personalized service made all the difference.",
+      role: "Business Owner",
+    },
+    {
+      name: "Sarah Johnson",
+      text: "I'm extremely satisfied with the professional and thorough service provided by Best-Rate. They helped me achieve my financial goals.",
+      role: "Entrepreneur",
+    },
+    {
+      name: "Michael Brown",
+      text: "The team at Best-Rate goes above and beyond. Their knowledge and dedication to client success is unmatched in the industry.",
+      role: "Real Estate Investor",
+    },
+  ];
+
   return (
-    <div className="testimonial bg-light-alt">
-      <div className="heading">
-        <Row className="justify-content-center">
-          <Col lg={4}>
-            <h2>Testimonial</h2>
+    <section className="testimonials py-5 bg-light">
+      <Container>
+        <Row className="justify-content-center text-center mb-5">
+          <Col lg={6}>
+            <span className="subtitle">Testimonials</span>
+            <h2 className="title">What Our Clients Say</h2>
+            <p className="text-muted">
+              Read what our valued clients have to say about their experience
+              working with us
+            </p>
           </Col>
         </Row>
-      </div>
-      <Slider {...settings}>
-        {[1, 2, 3, 4].map((index) => (
-          <div key={index} className="testimonial-item">
-            <div className="box">
-              <figure className="image">
-                <div className="img"></div>
-              </figure>
-              <div className="test-component">
-                <h4>Efecha Omoware</h4>
-                <p>
-                  I now enjoy financial freedom like I’ve never known before
-                  doing what I love.I now enjoy financial freedom like I’ve
-                  never known before doing what I love.I now enjoy financial
-                  freedom like I’ve never known before doing what I love.
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
+
+        <Row className="justify-content-center">
+          <Col lg={8}>
+            <Slider {...settings}>
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="px-3">
+                  <div className="testimonial-card text-center p-4 bg-white shadow-sm rounded">
+                    <div className="testimonial-content">
+                      <p className="mb-4">{testimonial.text}</p>
+                      <h4 className="mb-1">{testimonial.name}</h4>
+                      <p className="text-muted mb-0">{testimonial.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 

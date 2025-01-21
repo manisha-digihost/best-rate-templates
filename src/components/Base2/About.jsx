@@ -5,36 +5,36 @@ import Col from "react-bootstrap/Col";
 
 const About = () => {
   return (
-    <>
-      <div className="about bg-light-alt">
-        <Container>
-          <Row>
-            <Col lg={6}>
-              <div className="img-container">
-                {/* <img src="" alt="" />      */}
+    <section className="about py-5 about2">
+      <Container>
+        <Row className="align-items-center">
+          <Col lg={5}>
+            <div className="about-content pe-lg-5">
+              <span className="subtitle">About Us</span>
+              <h2 className="title mb-4">About Best-Rate</h2>
+              <p className="mb-4">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum
+                fugiat porro quas ducimus quis molestiae perferendis facere sit.
+                Dignissimos laboriosam quam sunt modi est harum reiciendis rem
+                blanditiis necessitatibus reprehenderit?
+              </p>
+              <button className="btn btn-primary">Learn More</button>
+            </div>
+          </Col>
+          <Col lg={7}>
+            <div className="about-image position-relative">
+              <div className="img-container rounded overflow-hidden shadow-lg">
+                {/* <img src="" alt="" className="img-fluid" /> */}
               </div>
-            </Col>
-            <Col lg={6}>
-              <div className="about-content">
-                <h2>About Best-Rate</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum
-                  fugiat porro quas ducimus quis molestiae perferendis facere
-                  sit. Dignissimos laboriosam quam sunt modi est harum
-                  reiciendis rem blanditiis necessitatibus reprehenderit?
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum
-                  fugiat porro quas ducimus quis molestiae perferendis facere
-                  sit. Dignissimos laboriosam quam sunt modi est harum
-                  reiciendis rem blanditiis necessitatibus reprehenderit?
-                </p>
+              <div className="experience-badge position-absolute bg-primary text-white p-4 rounded-circle badge-circle">
+                <h3 className="mb-0">15+</h3>
+                <p className="mb-0 text-center">Years Experience</p>
               </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 

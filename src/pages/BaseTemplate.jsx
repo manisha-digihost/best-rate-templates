@@ -1,19 +1,19 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Hero from "../components/Base2/Hero";
-import USPS from "../components/Base2/USPS";
-import About from "../components/Base2/About";
-import Products from "../components/Base2/Products";
-import Testimonials from "../components/Base2/Testimonials";
-import Gallery from "../components/Base2/Gallery";
-import Contact from "../components/Base2/Contact";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Hero from "../components/Base/Hero";
+import USPS from "../components/Base/USPS";
+import About from "../components/Base/About";
+import Products from "../components/Base/Products";
+import Testimonials from "../components/Base/Testimonials";
+import Gallery from "../components/Base/Gallery";
+import Contact from "../components/Base/Contact";
 import Header from "../layout/Header/Header";
 import Footer from "../layout/Footer/Footer";
 
 const BaseTemplate = () => {
   return (
     <div>
-      <Header/>
+      <Header />
       <Hero />
       <USPS />
       <About />
@@ -21,7 +21,7 @@ const BaseTemplate = () => {
       <Testimonials />
       <Gallery />
       <Contact />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
