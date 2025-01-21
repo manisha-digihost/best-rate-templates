@@ -8,20 +8,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
-      {/* <Header /> */}
-      <Router>
+    <Router>
+      <div>
+        {/* <Header /> */}
         <Routes>
-          <Route Component={BaseTemplate} path="/" element={<BaseTemplate />} />
-          <Route
-            Component={BaseTemplate2}
-            path="/base-template-2"
-            element={<BaseTemplate2 />}
-          />
+          <Route path="/" element={<BaseTemplate />} />
+          <Route path="/base-template-2" element={<BaseTemplate2 />} />
         </Routes>
-      </Router>
-      {/* <Footer /> */}
-    </div>
+        {/* <Footer /> */}
+      </div>
+    </Router>
   );
 };
 
