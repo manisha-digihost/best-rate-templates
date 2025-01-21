@@ -1,85 +1,56 @@
 import React from "react";
+import { FaAward, FaClock, FaHeadset } from "react-icons/fa";
 
 const USPS = () => {
   return (
-    <div>
-      <div className="container marketing section">
-        <div className="row">
-          <div className="col-lg-4">
-            <svg
-              className="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              />
-            </svg>
-            <h2 className="fw-normal mt-3">Heading</h2>
-            <p className="mt-3">
-              And lastly this, the third column of representative placeholder
-              content.
-            </p>
+    <section className="usps py-5">
+      <div className="container">
+        <div className="row text-center">
+          <div className="col-12">
+            <h2 className="section-title">Why Choose Us</h2>
+        
           </div>
-          <div className="col-lg-4">
-            <svg
-              className="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              />
-            </svg>
-            <h2 className="fw-normal mt-3">Heading</h2>
-            <p className="mt-3">
-              And lastly this, the third column of representative placeholder
-              content.
-            </p>
+        </div>
+        
+        <div className="row g-4">
+          <div className="col-md-4">
+            <div className="usps-item p-4 text-center">
+              <div className="icon-wrapper mb-3">
+                <FaAward size={48} />
+              </div>
+              <h3 className="h4 mb-3">Quality Service</h3>
+              <p className="mb-0">
+                We pride ourselves on delivering exceptional quality in everything we do.
+              </p>
+            </div>
           </div>
-          <div className="col-lg-4">
-            <svg
-              className="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              />
-            </svg>
-            <h2 className="fw-normal mt-3">Heading</h2>
-            <p className="mt-3">
-              And lastly this, the third column of representative placeholder
-              content.
-            </p>
+
+          <div className="col-md-4">
+            <div className="usps-item p-4 text-center">
+              <div className="icon-wrapper mb-3">
+                <FaClock size={48} />
+              </div>
+              <h3 className="h4 mb-3">Fast Delivery</h3>
+              <p className="mb-0">
+                Quick turnaround times without compromising on quality.
+              </p>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="usps-item p-4 text-center">
+              <div className="icon-wrapper mb-3">
+                <FaHeadset size={48} />
+              </div>
+              <h3 className="h4 mb-3">24/7 Support</h3>
+              <p className="mb-0">
+                Our dedicated team is always here to help you succeed.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
