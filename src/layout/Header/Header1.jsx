@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 
 const Header1 = () => {
   return (
@@ -14,14 +15,16 @@ const Header1 = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
-            <Nav.Link href="#home" className="mx-2">Home</Nav.Link>
-            <Nav.Link href="#about" className="mx-2">About</Nav.Link>
+            <Link to="#home" className="mx-2 nav-link">Home</Link>
+            <Link to="#about" className="mx-2 nav-link">About</Link>
             <NavDropdown title="Services" id="basic-nav-dropdown" className="mx-2">
               <NavDropdown.Item href="#products">Products</NavDropdown.Item>
               <NavDropdown.Item href="#testimonials">Testimonials</NavDropdown.Item>
               <NavDropdown.Item href="#gallery">Gallery</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#contact" className="mx-2">Contact</Nav.Link>
+            <Link to="#contact" className="mx-2 nav-link">Contact</Link>
+            {/* <Link to="/">Template</Link> */}
+            <Link to="/" className="mx-2 nav-link">Template2</Link>
           </Nav>
           <div className="d-flex">
             <button className="btn btn-primary rounded-pill px-4">Get Started</button>
