@@ -29,16 +29,16 @@ const Footer1 = () => {
             <h5 className="text-white mb-3">Quick Links</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a href="#" className="text-white text-decoration-none">Home</a>
+                <a href="#!" className="text-white text-decoration-none">Home</a>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-white text-decoration-none">About Us</a>
+                <a href="#!" className="text-white text-decoration-none">About Us</a>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-white text-decoration-none">Services</a>
+                <a href="#!" className="text-white text-decoration-none">Services</a>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-white text-decoration-none">Contact</a>
+                <a href="#!" className="text-white text-decoration-none">Contact</a>
               </li>
             </ul>
           </div>
