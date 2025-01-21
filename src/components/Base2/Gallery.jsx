@@ -71,10 +71,35 @@ const Gallery = () => {
       description:
         "Breathtaking coastal view of Big Sur's dramatic cliffs and ocean.",
     },
+    {
+      id: 5,
+      thumbnail:
+        "https://images.unsplash.com/photo-1526281216101-e55f00f0db7a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=240&q=80",
+      fullSize:
+        "https://images.unsplash.com/photo-1526281216101-e55f00f0db7a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80",
+      photographer: "Yusuf Evli",
+      photographerLink: "https://unsplash.com/@yusufevli",
+      caption: "Foggy Road",
+      description:
+        "Mysterious foggy road creating an atmospheric and moody scene.",
+    },
+    {
+      id: 6,
+      thumbnail:
+        "https://images.unsplash.com/photo-1464852045489-bccb7d17fe39?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80",
+      fullSize:
+        "https://images.unsplash.com/photo-1464852045489-bccb7d17fe39?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+      photographer: "fynn",
+      photographerLink: "https://unsplash.com/@fynn_it",
+      location: "Big Sur, United States",
+      locationLink: "https://unsplash.com/s/photos/big-sur%2C-united-states",
+      description:
+        "Breathtaking coastal view of Big Sur's dramatic cliffs and ocean.",
+    },
   ];
 
   return (
-    <section className="gallery py-5">
+    <section className="gallery section">
       <Container>
         <div className="text-center mb-5">
           <span className="px-3 py-2 rounded-pill mb-2">Our Portfolio</span>
@@ -96,7 +121,7 @@ const Gallery = () => {
         >
           {galleryImages.map((image) => (
             <Col
-              lg={6}
+              lg={4}
               key={image.id}
               className="gallery-item"
               data-src={image.fullSize}

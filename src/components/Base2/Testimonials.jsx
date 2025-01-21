@@ -37,7 +37,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="testimonials py-5 bg-light">
+    <section className="testimonials bg-light-alt section">
       <Container>
         {/* <Row className="justify-content-center text-center mb-5">
           <Col lg={6}>

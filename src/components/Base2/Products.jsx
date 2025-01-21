@@ -41,7 +41,7 @@ const Products = () => {
         <Row className="g-4">
           {products.map((product, index) => (
             <Col lg={4} key={index}>
-              <div className="service-card bg-white p-4 rounded-4 h-100 position-relative overflow-hidden">
+              <div className="service-card bg-light-alt p-4 rounded-4 h-100 position-relative overflow-hidden">
                 <span className="service-icon display-4 mb-3 d-block">
                   {product.icon}
                 </span>

@@ -5,7 +5,6 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 
-
 const Header = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -14,15 +13,29 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Link to="#home" className="mx-2 nav-link">Home</Link>
+            <Link to="#home" className="mx-2 nav-link">
+              Home
+            </Link>
             {/* <Nav.Link href="#home">USPS</Nav.Link> */}
-            <Link to="#home" className="mx-2 nav-link">About</Link>
-            <Link to="#home" className="mx-2 nav-link">Products</Link>
-            <Link to="#home" className="mx-2 nav-link">Testimonials</Link>
-            <Link to="#home" className="mx-2 nav-link">Gallery</Link>
-            <Link to="#home" className="mx-2 nav-link">Contact Us</Link>
+            <Link to="#home" className="mx-2 nav-link">
+              About
+            </Link>
+            <Link to="#home" className="mx-2 nav-link">
+              Products
+            </Link>
+            <Link to="#home" className="mx-2 nav-link">
+              Testimonials
+            </Link>
+            <Link to="#home" className="mx-2 nav-link">
+              Gallery
+            </Link>
+            <Link to="#home" className="mx-2 nav-link">
+              Contact Us
+            </Link>
             {/* <Link to="base-template-2">Template2</Link> */}
-            <Link to="base-template-2" className="mx-2 nav-link">Template2</Link>
+            <Link to="base-template-2" className="mx-2 nav-link">
+              Template2
+            </Link>
             {/* <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

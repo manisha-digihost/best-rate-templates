@@ -4,7 +4,7 @@ import { LuClock4 } from "react-icons/lu";
 
 const Contact = () => {
   return (
-    <section className="contact-section py-5">
+    <section className="contact-section section bg-light-alt">
       <div className="container">
         {/* <div className="row justify-content-center text-center mb-5">
           <div className="col-lg-6">
@@ -27,14 +27,16 @@ const Contact = () => {
 
         <div className="row align-items-stretch">
           <div className="col-lg-4 mb-4 mb-lg-0">
-            <div className="contact-info h-100 bg-primary text-white p-4 rounded-3">
+            <div className="contact-info h-100 bg-dark text-white p-4 rounded-3">
               <h3 className="mb-4 text-white">Contact Information</h3>
 
               <div className="info-item d-flex mb-4">
                 <IoLocationSharp className="contact-icon me-3" size={24} />
                 <div>
                   <h6 className="text-white mb-1">Our Location</h6>
-                  <p className="mb-0">3481 Melrose Place, Beverly Hills</p>
+                  <p className="mb-0 text-light-alt">
+                    3481 Melrose Place, Beverly Hills
+                  </p>
                 </div>
               </div>
 
@@ -42,7 +44,7 @@ const Contact = () => {
                 <IoMail className="contact-icon me-3" size={24} />
                 <div>
                   <h6 className="text-white mb-1">Email Address</h6>
-                  <p className="mb-0">Info@example.com</p>
+                  <p className="mb-0 text-light-alt">Info@example.com</p>
                 </div>
               </div>
 
@@ -50,7 +52,7 @@ const Contact = () => {
                 <IoCall className="contact-icon me-3" size={24} />
                 <div>
                   <h6 className="text-white mb-1">Phone Number</h6>
-                  <p className="mb-0">(+1) 517 397 7100</p>
+                  <p className="mb-0 text-light-alt">(+1) 517 397 7100</p>
                 </div>
               </div>
 
@@ -58,7 +60,7 @@ const Contact = () => {
                 <LuClock4 className="contact-icon me-3" size={24} />
                 <div>
                   <h6 className="text-white mb-1">Working Hours</h6>
-                  <p className="mb-0">
+                  <p className="mb-0 text-light-alt">
                     Monday - Friday: 8:00 AM - 4:00 PM
                     <br />
                     Saturday: 10:00 AM - 2:00 PM
@@ -126,9 +128,15 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="col-12">
-                    <button
+                    {/* <button
                       type="submit"
                       className="btn btn-primary btn-lg px-5"
+                    >
+                      Send Message
+                    </button> */}
+                    <button
+                      type="submit"
+                      className="btn btn-primary btn-lg rounded-pill px-5 hover-scale"
                     >
                       Send Message
                     </button>

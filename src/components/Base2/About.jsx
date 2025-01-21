@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 
 const About = () => {
   return (
-    <section className="about py-5 about2">
+    <section className="about py-5 about2 bg-light-alt">
       <Container>
         <Row className="align-items-center">
           <Col lg={5}>
@@ -18,7 +18,11 @@ const About = () => {
                 Dignissimos laboriosam quam sunt modi est harum reiciendis rem
                 blanditiis necessitatibus reprehenderit?
               </p>
-              <button className="btn btn-primary">Learn More</button>
+              <div>
+                <button className="btn btn-primary rounded-pill px-5 hover-scale">
+                  Learn More
+                </button>
+              </div>
             </div>
           </Col>
           <Col lg={7}>
