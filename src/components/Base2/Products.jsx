@@ -1,77 +1,74 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col } from "react-bootstrap";
+import { FaArrowRight } from "react-icons/fa";
 
 const Products = () => {
+  const products = [
+    {
+      title: "Financial Planning",
+      description:
+        "Comprehensive financial planning tailored to your goals and future aspirations",
+      icon: "💰",
+    },
+    {
+      title: "Investment Strategy",
+      description:
+        "Expert investment advice and portfolio management to maximize your returns",
+      icon: "📈",
+    },
+    {
+      title: "Risk Management",
+      description:
+        "Protect your assets and minimize risks with our proven strategies",
+      icon: "🛡️",
+    },
+  ];
+
   return (
-    <section className="products py-5">
+    <section className="products-section py-5 bg-light">
       <Container>
-        <Row className="justify-content-center text-center mb-5">
-          <Col lg={6}>
-            <span className="subtitle">What We Offer</span>
-            <h2 className="title">Our Products & Services</h2>
-            <p className="text-muted">
-              We provide high quality products and services tailored to your
-              needs
-            </p>
-          </Col>
-        </Row>
+        <div className="text-center mb-5">
+          <span className="px-3 py-2 rounded-pill mb-2">Our Services</span>
+          <h2 className="display-5 fw-bold mb-3">
+            Solutions That Drive Success
+          </h2>
+          <p className="text-muted lead mx-auto" style={{ maxWidth: "700px" }}>
+            Discover our range of financial services designed to help you
+            achieve your goals and secure your future
+          </p>
+        </div>
 
         <Row className="g-4">
-          <Col lg={4}>
-            <div className="product-card shadow-sm h-100">
-              <div className="product-image rounded-top">
-                {/* Product image here */}
-              </div>
-              <div className="product-content p-4">
-                <h3 className="h4 mb-3">Premium Service</h3>
-                <p className="text-muted mb-3">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum
-                  fugiat porro quas ducimus quis
-                </p>
-                <a href="!#" className="btn btn-outline-primary">
-                  Learn More
+          {products.map((product, index) => (
+            <Col lg={4} key={index}>
+              <div className="service-card bg-white p-4 rounded-4 h-100 position-relative overflow-hidden">
+                <span className="service-icon display-4 mb-3 d-block">
+                  {product.icon}
+                </span>
+                <h3 className="h4 mb-3">{product.title}</h3>
+                <p className="text-muted mb-4">{product.description}</p>
+                <a
+                  href="!#"
+                  className="text-primary text-decoration-none d-flex align-items-center"
+                >
+                  Learn More <FaArrowRight className="ms-2" />
                 </a>
+                <div
+                  className="service-card-shape position-absolute"
+                  style={{
+                    background:
+                      "linear-gradient(45deg, #f8f9fa 25%, transparent 25%)",
+                    width: "150px",
+                    height: "150px",
+                    bottom: "-75px",
+                    right: "-75px",
+                    transform: "rotate(45deg)",
+                    opacity: "0.1",
+                  }}
+                />
               </div>
-            </div>
-          </Col>
-
-          <Col lg={4}>
-            <div className="product-card shadow-sm h-100">
-              <div className="product-image rounded-top">
-                {/* Product image here */}
-              </div>
-              <div className="product-content p-4">
-                <h3 className="h4 mb-3">Quality Products</h3>
-                <p className="text-muted mb-3">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum
-                  fugiat porro quas ducimus quis
-                </p>
-                <a href="!#" className="btn btn-outline-primary">
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </Col>
-
-          <Col lg={4}>
-            <div className="product-card shadow-sm h-100">
-              <div className="product-image rounded-top">
-                {/* Product image here */}
-              </div>
-              <div className="product-content p-4">
-                <h3 className="h4 mb-3">Expert Solutions</h3>
-                <p className="text-muted mb-3">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum
-                  fugiat porro quas ducimus quis
-                </p>
-                <a href="!#" className="btn btn-outline-primary">
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </Col>
+            </Col>
+          ))}
         </Row>
       </Container>
     </section>

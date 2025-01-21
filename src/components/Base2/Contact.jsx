@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section className="contact-section py-5">
       <div className="container">
-        <div className="row justify-content-center text-center mb-5">
+        {/* <div className="row justify-content-center text-center mb-5">
           <div className="col-lg-6">
             <span className="subtitle text-primary">Contact Us</span>
             <h2 className="title">Let's Start a Conversation</h2>
@@ -15,6 +15,14 @@ const Contact = () => {
               you.
             </p>
           </div>
+        </div> */}
+
+        <div className="text-center mb-5">
+          <span className="px-3 py-2 rounded-pill mb-2">Contact Us</span>
+          <h2 className="display-5 fw-bold mb-3">Let's Start a Conversation</h2>
+          <p className="text-muted lead mx-auto" style={{ maxWidth: "700px" }}>
+            Have questions? We're here to help and would love to hear from
+          </p>
         </div>
 
         <div className="row align-items-stretch">

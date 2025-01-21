@@ -3,11 +3,13 @@ import { useEffect } from "react";
 import LightGallery from "lightgallery/react";
 import lgZoom from "lightgallery/plugins/zoom";
 import lgVideo from "lightgallery/plugins/video";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
 
 // Import required lightgallery CSS
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-video.css";
+import "lightgallery/css/lg-thumbnail.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Gallery = () => {
@@ -74,63 +76,54 @@ const Gallery = () => {
   return (
     <section className="gallery py-5">
       <Container>
-        <Row className="justify-content-center text-center mb-5">
-          <Col lg={6}>
-            <span className="subtitle text-primary">Our Portfolio</span>
-            <h2 className="title display-4 mb-3">Capturing Moments</h2>
-            <p className="text-muted lead">
-              Explore our collection of stunning photographs that tell
-              compelling stories
-            </p>
-          </Col>
-        </Row>
+        <div className="text-center mb-5">
+          <span className="px-3 py-2 rounded-pill mb-2">Our Portfolio</span>
+          <h2 className="display-5 fw-bold mb-3">Capturing Moments</h2>
+          <p className="text-muted lead mx-auto" style={{ maxWidth: "700px" }}>
+            Explore our collection of stunning photographs that tell compelling
+            stories
+          </p>
+        </div>
 
         <LightGallery
           onInit={onInit}
           speed={500}
-          plugins={[lgZoom, lgVideo]}
+          plugins={[lgZoom, lgVideo, lgThumbnail]}
           mode="lg-fade"
-          elementClassNames="gallery-container"
+          download={false}
+          counter={true}
+          elementClassNames="gallery-container row g-4"
         >
-          <Row className="g-4">
-            {galleryImages.map((image) => (
-              <Col lg={6} key={image.id}>
-                <div className="gallery-card position-relative overflow-hidden shadow-lg rounded">
-                  <a
-                    className="gallery-item"
-                    data-src={image.fullSize}
-                    data-sub-html={`<h4>Photo by - <a href='${
-                      image.photographerLink
-                    }'>${image.photographer}</a></h4>
-                    <p>${image.description}</p>
-                    ${
-                      image.location ? `<p>Location: ${image.location}</p>` : ""
-                    }`}
-                  >
-                    <img
-                      src={image.thumbnail}
-                      alt={`Gallery image ${image.id}`}
-                      className="img-fluid w-100"
-                      style={{ height: "400px", objectFit: "cover" }}
-                    />
-                    <div
-                      className="gallery-overlay position-absolute start-0 top-0 w-100 h-100 d-flex flex-column justify-content-end p-4 text-white"
-                      style={{
-                        background:
-                          "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
-                      }}
-                    >
-                      <h3 className="h4 mb-2">
-                        {image.caption || `Beautiful Scene ${image.id}`}
-                      </h3>
-                      <p className="mb-0">{image.description}</p>
-                      <small className="mt-2">Click to view full size</small>
-                    </div>
-                  </a>
+          {galleryImages.map((image) => (
+            <Col
+              lg={6}
+              key={image.id}
+              className="gallery-item"
+              data-src={image.fullSize}
+            >
+              <div className="gallery-card position-relative overflow-hidden shadow-lg rounded">
+                <img
+                  src={image.thumbnail}
+                  alt={`Gallery image ${image.id}`}
+                  className="img-fluid w-100"
+                  style={{ height: "400px", objectFit: "cover" }}
+                />
+                <div
+                  className="gallery-overlay position-absolute start-0 top-0 w-100 h-100 d-flex flex-column justify-content-end p-4 text-white"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
+                  }}
+                >
+                  <h3 className="h4 mb-2">
+                    {image.caption || `Beautiful Scene ${image.id}`}
+                  </h3>
+                  <p className="mb-0 text-light-alt">{image.description}</p>
+                  <small className="mt-2">Click to view full size</small>
                 </div>
-              </Col>
-            ))}
-          </Row>
+              </div>
+            </Col>
+          ))}
         </LightGallery>
       </Container>
     </section>
