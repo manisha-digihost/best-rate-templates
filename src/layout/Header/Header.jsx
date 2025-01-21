@@ -22,7 +22,7 @@ const Header = () => {
             <Link to="#home" className="mx-2 nav-link">Gallery</Link>
             <Link to="#home" className="mx-2 nav-link">Contact Us</Link>
             {/* <Link to="base-template-2">Template2</Link> */}
-            <Link to="base-template-2" className="mx-2 nav-link">Template2</Link>
+            <Link to="base-template-2" className="mx-2 nav-link">Template1</Link>
             {/* <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
