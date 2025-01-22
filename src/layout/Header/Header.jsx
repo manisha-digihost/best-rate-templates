@@ -36,6 +36,9 @@ const Header = () => {
             <Link to="base-template-2" className="mx-2 nav-link">
               Template2
             </Link>
+            <Link to="base-template-3" className="mx-2 nav-link">
+              Template3
+            </Link>
             {/* <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

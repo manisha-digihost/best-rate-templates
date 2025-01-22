@@ -1,6 +1,7 @@
 import React from "react";
 import BaseTemplate from "./pages/BaseTemplate";
-import BaseTemplate2 from "./pages/BaseTemplate2";
+import Template1 from "./pages/Template1";
+import Template2 from "./pages/Template2";
 import Footer from "./layout/Footer/Footer";
 import Header from "./layout/Header/Header";
 import { Routes, Route } from "react-router-dom";
@@ -11,7 +12,8 @@ const App = () => {
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<BaseTemplate />} />
-        <Route path="/base-template-2" element={<BaseTemplate2 />} />
+        <Route path="/base-template-2" element={<Template1 />} />
+        <Route path="/base-template-3" element={<Template2 />} />
       </Routes>
       {/* <Footer /> */}
     </div>
