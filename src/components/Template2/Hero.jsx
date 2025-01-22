@@ -3,18 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 function Hero() {
   return (
-    <section id="home" className="hero-section">
-      <div
-        className="hero-image"
-        style={{
-          height: "100vh",
-          backgroundImage: `url('/src/assets/images/hero.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          position: "relative",
-        }}
-      >
+    <section id="home" className="hero-section hero-3">
+      <div className="hero-image">
         <div className="overlay"></div>
         <Container className="h-100">
           <Row className="h-100 align-items-center">
