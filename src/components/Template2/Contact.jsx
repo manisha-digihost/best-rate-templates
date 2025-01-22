@@ -4,8 +4,33 @@ import { LuClock4 } from "react-icons/lu";
 
 const Contact = () => {
   return (
-    <section className="contact-section section bg-light-alt">
-      <div className="container">
+    <section className="contact-section section bg-light-alt" 
+    style={{
+      // backgroundImage: "url('https://i.pinimg.com/736x/57/02/19/570219a214a9012b26bb42a7ca216591.jpg')",
+      // backgroundPosition: "center center",
+      // backgroundRepeat: "no-repeat",
+      // backgroundSize: "cover",
+      position: "relative", 
+      }}>
+           <div
+        style={{
+          backgroundImage: "url('https://i.pinimg.com/736x/57/02/19/570219a214a9012b26bb42a7ca216591.jpg')", // Adjust opacity (0.5 is 50% opacity)
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          opacity:0.1
+        }}
+      ></div>
+      <div className="container"
+      style={{
+        position: "relative",
+        zIndex:111
+      }}>
         {/* <div className="row justify-content-center text-center mb-5">
           <div className="col-lg-6">
             <span className="subtitle text-primary">Contact Us</span>
@@ -18,15 +43,20 @@ const Contact = () => {
         </div> */}
 
         <div className="text-center mb-5">
-          <span className="px-3 py-2 rounded-pill mb-2">Contact Us</span>
-          <h2 className="display-5 fw-bold mb-3">Let's Start a Conversation</h2>
+          <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
+           Contact Us
+          </span>
+          <h2 className="display-5 fw-bold mb-3">
+            Solutions That Drive Success
+          </h2>
           <p className="text-muted lead mx-auto" style={{ maxWidth: "700px" }}>
-            Have questions? We're here to help and would love to hear from
+            Discover our range of financial services designed to help you
+            achieve your goals and secure your future
           </p>
         </div>
 
-        <div className="row align-items-stretch">
-          <div className="col-lg-4 mb-4 mb-lg-0">
+        <div className="row align-items-stretch justify-content-center">
+          {/* <div className="col-lg-4 mb-4 mb-lg-0">
             <div className="contact-info h-100 bg-dark text-white p-4 rounded-3">
               <h3 className="mb-4 text-white">Contact Information</h3>
 
@@ -68,7 +98,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="col-lg-8">
             <div className="contact-form bg-white p-4 rounded-3 shadow">
