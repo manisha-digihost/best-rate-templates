@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import HeroImage from "../../../src/assets/images/hero.png";
 
 function Hero() {
   return (
@@ -9,7 +8,7 @@ function Hero() {
         className="hero-image"
         style={{
           height: "100vh",
-          backgroundImage: `url('../../../src/assets/images/hero.png')`,
+          backgroundImage: `url('/src/assets/images/hero.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
