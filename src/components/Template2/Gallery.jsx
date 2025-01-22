@@ -4,9 +4,8 @@ import React from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
 import Masonry, {
-  ResponsiveMasonry
+  ResponsiveMasonry,
 } from "https://cdn.skypack.dev/react-responsive-masonry@2.1.0";
-
 
 const Gallery = () => {
   const images = [
