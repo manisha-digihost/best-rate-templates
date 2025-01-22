@@ -45,7 +45,7 @@ const Header2 = () => {
       </div>
 
       {/* Main Header */}
-      <Navbar expand="lg" className="bg-white shadow-sm">
+      <Navbar expand="lg" className="bg-white shadow-sm py-3">
         <Container>
           <Navbar.Brand href="#home" className="d-flex align-items-center">
             {/* <img
