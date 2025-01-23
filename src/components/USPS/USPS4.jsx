@@ -2,73 +2,106 @@ import React from "react";
 import { FaAward, FaClock, FaHeadset } from "react-icons/fa";
 
 const USPS4 = () => {
+  const benefits = [
+    {
+      icon: <FaAward size={48} />,
+      title: "Quality Service",
+      description: "We pride ourselves on delivering exceptional quality in everything we do, ensuring your complete satisfaction."
+    },
+    {
+      icon: <FaClock size={48} />,
+      title: "Fast Delivery", 
+      description: "Quick turnaround times without compromising on quality. We value your time as much as you do."
+    },
+    {
+      icon: <FaHeadset size={48} />,
+      title: "24/7 Support",
+      description: "Our dedicated team is always here to help you succeed, providing round-the-clock assistance."
+    }
+  ];
+
   return (
-    <section className="usps section bg-light-alt">
+    <section className="benefits-section py-5">
       <div className="container">
-        <div className="text-center mb-5">
-          <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
-            Our Benefits
-          </span>
-          <h2 className="display-5 fw-bold mb-3">Why Choose Us</h2>
-          <p className="text-muted lead mx-auto" style={{ maxWidth: "700px" }}>
-            We deliver exceptional service with industry-leading expertise
-          </p>
+        <div className="row align-items-center mb-5">
+          <div className="col-lg-6">
+            <h2 className="display-4 fw-bold mb-4">Why Choose Our Services?</h2>
+            <div className="d-flex align-items-center">
+              <div className="accent-line me-3"></div>
+              <p className="lead mb-0">Experience excellence in every interaction</p>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <p className="text-muted">We combine industry expertise with innovative solutions to deliver outstanding results for our clients. Our commitment to excellence sets us apart.</p>
+          </div>
         </div>
 
-        <div className="row g-4">
-          <div className="col-md-4">
-            <div className="card border-0 shadow-sm h-100 hover-translate">
-              <div className="card-body p-4">
-                <div className="text-primary mb-4">
-                  <FaAward size={42} />
-                </div>
-                <h3 className="h4 mb-3">Quality Service</h3>
-                <p className="text-muted mb-0">
-                  We pride ourselves on delivering exceptional quality in
-                  everything we do, ensuring your complete satisfaction.
-                </p>
+        <div className="benefits-grid">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="benefit-card">
+              <div className="icon-wrapper">
+                {benefit.icon}
               </div>
+              <h3>{benefit.title}</h3>
+              <p>{benefit.description}</p>
             </div>
-          </div>
-
-          <div className="col-md-4">
-            <div className="card border-0 shadow-sm h-100 hover-translate">
-              <div className="card-body p-4">
-                <div className="text-primary mb-4">
-                  <FaClock size={42} />
-                </div>
-                <h3 className="h4 mb-3">Fast Delivery</h3>
-                <p className="text-muted mb-0">
-                  Quick turnaround times without compromising on quality. We
-                  value your time as much as you do.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-4">
-            <div className="card border-0 shadow-sm h-100 hover-translate">
-              <div className="card-body p-4">
-                <div className="text-primary mb-4">
-                  <FaHeadset size={42} />
-                </div>
-                <h3 className="h4 mb-3">24/7 Support</h3>
-                <p className="text-muted mb-0">
-                  Our dedicated team is always here to help you succeed,
-                  providing round-the-clock assistance.
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
       <style jsx>{`
-        .hover-translate {
-          transition: transform 0.3s ease;
+        .benefits-section {
+          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
-        .hover-translate:hover {
+        
+        .accent-line {
+          width: 60px;
+          height: 4px;
+          background: var(--bs-primary);
+          border-radius: 2px;
+        }
+        
+        .benefits-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          margin-top: 2rem;
+        }
+        
+        .benefit-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 1rem;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+          transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
           transform: translateY(-10px);
+          box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .icon-wrapper {
+          color: var(--bs-primary);
+          margin-bottom: 1.5rem;
+        }
+        
+        .benefit-card h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          color: #2d3436;
+        }
+        
+        .benefit-card p {
+          color: #636e72;
+          line-height: 1.6;
+          margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+          .benefits-grid {
+            grid-template-columns: 1fr;
+          }
         }
       `}</style>
     </section>
