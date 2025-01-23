@@ -7,13 +7,13 @@ import Products from "../components/Template3/Products";
 import Testimonials from "../components/Template3/Testimonials";
 import Gallery from "../components/Template3/Gallery";
 import Contact from "../components/Template3/Contact";
-import Header2 from "../layout/Header/Header2";
-import Footer2 from "../layout/Footer/Footer2";
+import Header3 from "../layout/Header/Header3";
+import Footer3 from "../layout/Footer/Footer3";
 
 const Template3 = () => {
   return (
     <div>
-      <Header2 />
+      <Header3 />
       <Hero />
       <USPS />
       <About />
@@ -21,7 +21,7 @@ const Template3 = () => {
       <Testimonials />
       <Gallery />
       <Contact />
-      <Footer2 />
+      <Footer3 />
     </div>
   );
 };

@@ -1,108 +1,100 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
-import {
-  FaPhone,
-  FaEnvelope,
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaSearch, FaUserCircle } from "react-icons/fa";
 
 const Header2 = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Add scroll event listener
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <>
-      {/* Top Mini Header */}
-      <div className="bg-dark py-2">
+    <header className={`header-3 ${isScrolled ? "scrolled" : ""}`}>
+      {/* Contact Bar */}
+      <div className="bg-primary py-1">
         <Container>
           <div className="d-flex justify-content-between align-items-center">
-            <div className="d-flex text-white">
-              <div className="me-4">
-                <FaPhone className="me-2" />
+            <div className="contact-info d-flex">
+              <a href="tel:+1234567890" className="text-white me-4">
+                <FaPhoneAlt className="me-2" size={12} />
                 <small>+1 234 567 890</small>
-              </div>
-              <div>
-                <FaEnvelope className="me-2" />
+              </a>
+              <a href="mailto:info@bestrate.com" className="text-white">
+                <FaEnvelope className="me-2" size={12} />
                 <small>info@bestrate.com</small>
-              </div>
+              </a>
             </div>
-            <div className="d-flex">
-              <a href="#" className="text-white me-3">
-                <FaFacebookF />
+            <div className="user-actions">
+              <a href="#login" className="text-white me-3">
+                <small>Login</small>
               </a>
-              <a href="#" className="text-white me-3">
-                <FaTwitter />
-              </a>
-              <a href="#" className="text-white">
-                <FaInstagram />
+              <a href="#register" className="text-white">
+                <small>Register</small>
               </a>
             </div>
           </div>
         </Container>
       </div>
 
-      {/* Main Header */}
-      <Navbar expand="lg" className="bg-white shadow-sm py-3">
+      {/* Main Navigation */}
+      <Navbar expand="lg" className="bg-white py-3">
         <Container>
-          <Navbar.Brand href="#home" className="d-flex align-items-center">
-            {/* <img
-              src="/logo.png"
-              alt="Best Rate Logo"
-              height="40"
-              className="me-2"
-            /> */}
-            <span className="fw-bold fs-4">
-              <span className="text-primary">Best</span> Rate
+          <Navbar.Brand href="#home" className="me-5">
+            <span className="h3 mb-0 fw-bold">
+              <span className="text-primary">Best</span>Rate
             </span>
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="main-nav" />
 
           <Navbar.Collapse id="main-nav">
-            <Nav className="ms-auto me-4">
-              <Link to="#home" className="nav-link px-3 fw-medium">
+            <Nav className="mx-auto">
+              <Link to="#home" className="nav-link px-3">
                 Home
               </Link>
-              <Link to="#about" className="nav-link px-3 fw-medium">
-                About
+              <Link to="#about" className="nav-link px-3">
+                About Us
               </Link>
-              <NavDropdown
-                title="Services"
-                id="services-dropdown"
-                className="px-2"
-              >
-                <NavDropdown.Item href="#products" className="py-2">
-                  <i className="bi bi-box me-2"></i>
-                  Products
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#testimonials" className="py-2">
-                  <i className="bi bi-chat-quote me-2"></i>
-                  Testimonials
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#gallery" className="py-2">
-                  <i className="bi bi-images me-2"></i>
-                  Gallery
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Link to="#contact" className="nav-link px-3 fw-medium">
+              <Link to="#services" className="nav-link px-3">
+                Services
+              </Link>
+              <Link to="#products" className="nav-link px-3">
+                Products
+              </Link>
+              <Link to="#contact" className="nav-link px-3">
                 Contact
-              </Link>
-              <Link to="/" className="nav-link px-3 fw-medium">
-                Template1
               </Link>
             </Nav>
 
-            {/* <button className="btn btn-primary rounded-pill px-4 py-2">
-              <i className="bi bi-telephone-fill me-2"></i>
-              Get Quote
-            </button> */}
+            <div className="header-actions d-flex align-items-center">
+              <button className="btn text-muted me-3">
+                <FaSearch size={18} />
+              </button>
+              <button className="btn text-muted me-3">
+                <FaUserCircle size={20} />
+              </button>
+              <button className="btn btn-primary rounded-pill px-4">
+                Get Quote
+              </button>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+    </header>
   );
 };
 
