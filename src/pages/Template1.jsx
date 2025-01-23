@@ -1,26 +1,26 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Hero from "../components/Template1/Hero";
-import USPS from "../components/Template1/USPS";
-import About from "../components/Template1/About";
-import Products from "../components/Template1/Products";
-import Testimonials from "../components/Template1/Testimonials";
-import Gallery from "../components/Template1/Gallery";
-import Contact from "../components/Template1/Contact";
 import Header1 from "../layout/Header/Header1";
 import Footer1 from "../layout/Footer/Footer1";
+import About1 from "../components/About/About1";
+import Contact1 from "../components/Contact/Contact1";
+import Hero1 from "../components/Hero/Hero1";
+import USPS1 from "../components/USPS/USPS1";
+import Products1 from "../components/Products/Products1";
+import Testimonials1 from "../components/Testimonials/Testimonials1";
+import Gallery1 from "../components/Gallery/Gallery1";
 
 const Template1 = () => {
   return (
     <div>
       <Header1 />
-      <Hero />
-      <USPS />
-      <About />
-      <Products />
-      <Testimonials />
-      <Gallery />
-      <Contact />
+      <Hero1 />
+      <USPS1 />
+      <About1 />
+      <Products1 />
+      <Testimonials1 />
+      <Gallery1 />
+      <Contact1 />
       <Footer1 />
     </div>
   );

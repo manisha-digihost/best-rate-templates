@@ -1,12 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Hero from "../components/Base/Hero";
-import USPS from "../components/Base/USPS";
-import About from "../components/Base/About";
-import Products from "../components/Base/Products";
-import Testimonials from "../components/Base/Testimonials";
-import Gallery from "../components/Base/Gallery";
-import Contact from "../components/Base/Contact";
+import Hero from "../components/Hero/Hero";
+import USPS from "../components/USPS/USPS";
+import About from "../components/About/About";
+import Products from "../components/Products/Products";
+import Testimonials from "../components/Testimonials/Testimonials";
+import Gallery from "../components/Gallery/Gallery";
+import Contact from "../components/Contact/Contact";
 import Header from "../layout/Header/Header";
 import Footer from "../layout/Footer/Footer";
 
