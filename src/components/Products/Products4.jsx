@@ -10,19 +10,19 @@ const Products4 = () => {
     {
       title: "Financial Planning",
       description:
-        "Comprehensive financial planning tailored to your goals and future aspirations",
+        "Comprehensive financial planning tailored to your goals and future aspirations.",
       icon: "💰",
     },
     {
       title: "Investment Strategy",
       description:
-        "Expert investment advice and portfolio management to maximize your returns",
+        "Expert investment advice and portfolio management to maximize your returns.",
       icon: "📈",
     },
     {
       title: "Risk Management",
       description:
-        "Protect your assets and minimize risks with our proven strategies",
+        "Protect your assets and minimize risks with proven strategies.",
       icon: "🛡️",
     },
   ];
@@ -52,7 +52,7 @@ const Products4 = () => {
   };
 
   return (
-    <section className="products-section section bg-light">
+    <section className="products-section section">
       <Container>
         <div className="text-center mb-5">
           <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
@@ -63,39 +63,23 @@ const Products4 = () => {
           </h2>
           <p className="text-muted lead mx-auto" style={{ maxWidth: "700px" }}>
             Discover our range of financial services designed to help you
-            achieve your goals and secure your future
+            achieve your goals and secure your future.
           </p>
         </div>
 
         <Slider {...settings} className="products-slider">
           {products.map((product, index) => (
             <div key={index} className="px-3">
-              <div className="service-card bg-white rounded-4 h-100">
-                <div className="service-card-header p-4 bg-primary text-white rounded-top-4">
-                  <span className="service-icon display-4 mb-2 d-block">
-                    {product.icon}
-                  </span>
-                  <h3 className="h4 mb-0">{product.title}</h3>
+              <div className="service-card">
+                <div className="service-card-header">
+                  <span className="service-icon">{product.icon}</span>
+                  <h3 className="h5 fw-bold mt-3">{product.title}</h3>
                 </div>
-                <div className="service-card-body p-4">
-                  <p className="text-muted mb-4">{product.description}</p>
-                  <div className="service-features mb-4">
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="me-2 text-primary">✓</span>
-                      <span className="small">Personalized Approach</span>
-                    </div>
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="me-2 text-primary">✓</span>
-                      <span className="small">Expert Guidance</span>
-                    </div>
-                    <div className="d-flex align-items-center">
-                      <span className="me-2 text-primary">✓</span>
-                      <span className="small">Regular Updates</span>
-                    </div>
-                  </div>
+                <div className="service-card-body">
+                  <p className="text-muted">{product.description}</p>
                   <a
-                    href="!#"
-                    className="btn btn-outline-primary w-100 rounded-pill d-inline-flex align-items-center justify-content-center"
+                    href="#"
+                    className="btn btn-primary w-100 rounded-pill d-inline-flex align-items-center justify-content-center"
                   >
                     Learn More <FaArrowRight className="ms-2" />
                   </a>
@@ -105,40 +89,53 @@ const Products4 = () => {
           ))}
         </Slider>
       </Container>
+
       <style jsx>{`
+        .products-section {
+          // background: linear-gradient(135deg, #e3f2fd, #f1f8e9);
+          padding: 60px 0;
+        }
         .products-slider .slick-dots {
-          bottom: -40px;
+          bottom: -30px;
         }
         .products-slider .slick-dots li button:before {
-          color: var(--bs-primary);
+          // color: var(--bs-primary);
           font-size: 10px;
         }
         .products-slider .slick-dots li.slick-active button:before {
-          color: var(--bs-primary);
+          // color: var(--bs-primary);
         }
         .service-card {
-          position: relative;
-          overflow: hidden;
-          min-height: 450px;
+          background: white;
+          border-radius: 15px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          padding: 20px;
           display: flex;
           flex-direction: column;
-          box-shadow: 2px 2px 32px rgb(0 0 0 / 14%);
-          transition: transform 0.3s ease;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .service-card:hover {
-          transform: translateY(-5px);
+          transform: translateY(-8px);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
-        .service-card-header {
-          text-align: center;
+        .service-card-header .service-icon {
+          font-size: 50px;
+          color: var(--bs-primary);
         }
         .service-card-body {
+          margin-top: 20px;
           flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+        }
+        .btn {
+          transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn:hover {
+          background-color: var(--bs-primary);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         .slick-initialized .slick-slide {
-          padding: 20px 0;
+          padding: 10px;
         }
       `}</style>
     </section>
