@@ -8,12 +8,12 @@ import USPS4 from "../components/USPS/USPS4";
 import Products4 from "../components/Products/Products4";
 import Gallery4 from "../components/Gallery/Gallery4";
 import Testimonials4 from "../components/Testimonials/Testimonials4";
-import Header4 from "../layout/Header/Header4";
+import Header2 from "../layout/Header/Header2";
 
-const Template4 = () => {
+const Template5 = () => {
   return (
     <div>
-      <Header4 />
+      <Header2 />
       <Hero4 />
       <USPS4 />
       <About4 />
@@ -26,4 +26,4 @@ const Template4 = () => {
   );
 };
 
-export default Template4;
+export default Template5;

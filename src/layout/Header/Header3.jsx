@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { FaPhoneAlt, FaEnvelope, FaSearch, FaUserCircle } from "react-icons/fa";
 
-const Header2 = () => {
+const Header3 = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Add scroll event listener
@@ -98,4 +98,4 @@ const Header2 = () => {
   );
 };
 
-export default Header2;
+export default Header3;

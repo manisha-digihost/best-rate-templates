@@ -39,44 +39,46 @@ const Gallery4 = () => {
   ];
   return (
     <section className="gallery section">
-    <Container>
-      <div className="text-center mb-5">
-        <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
+      <Container>
+        <div className="text-center mb-5">
+          {/* <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
           Our Gallery
-        </span>
-        <h2 className="display-5 fw-bold mb-3">Solutions That Drive Success</h2>
-        <p className="text-muted lead mx-auto" style={{ maxWidth: "700px" }}>
-          Discover our range of financial services designed to help you
-          achieve your goals and secure your future.
-        </p>
-      </div>
-      <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index} className="px-3">
-            <div className="text-center  bg-white shadow-sm rounded gallery-img">
-              <img
-                src={image}
-                alt={`Gallery item ${index + 1}`}
-                className="img-fluid rounded "
-              />
+        </span> */}
+          <h2 className="display-5 fw-bold mb-3">
+            Solutions That Drive Success
+          </h2>
+          <p className="text-muted lead mx-auto" style={{ maxWidth: "700px" }}>
+            Discover our range of financial services designed to help you
+            achieve your goals and secure your future.
+          </p>
+        </div>
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div key={index} className="px-3">
+              <div className="text-center  bg-white shadow-sm rounded gallery-img">
+                <img
+                  src={image}
+                  alt={`Gallery item ${index + 1}`}
+                  className="img-fluid rounded "
+                />
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-    </Container>
-    <style jsx>{`
-      .gallery-img{
-          overflow:hidden;
+          ))}
+        </Slider>
+      </Container>
+      <style jsx>{`
+        .gallery-img {
+          overflow: hidden;
         }
-          .gallery-img img{
-            transition: all .3s linear
-          }
-      .gallery-img:hover img{
-          scale:1.1;
-          overflow:hidden;
-      }
-   `}</style>
-  </section>
+        .gallery-img img {
+          transition: all 0.3s linear;
+        }
+        .gallery-img:hover img {
+          scale: 1.1;
+          overflow: hidden;
+        }
+      `}</style>
+    </section>
   );
 };
 

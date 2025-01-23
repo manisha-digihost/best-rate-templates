@@ -5,27 +5,23 @@ import { LuClock4 } from "react-icons/lu";
 const Contact4 = () => {
   return (
     <section className="contact-section section bg-light-alt">
-        
       {/* <div className="container"> */}
-       
 
-        <div className="text-center mb-5">
-          <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
+      <div className="text-center mb-5">
+        {/* <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
            Contact Us
-          </span>
-          <h2 className="display-5 fw-bold mb-3">
-            Solutions That Drive Success
-          </h2>
-          <p className="text-muted lead mx-auto" style={{ maxWidth: "700px" }}>
-            Discover our range of financial services designed to help you
-            achieve your goals and secure your future
-          </p>
-        </div>
+          </span> */}
+        <h2 className="display-5 fw-bold mb-3">Solutions That Drive Success</h2>
+        <p className="text-muted lead mx-auto" style={{ maxWidth: "700px" }}>
+          Discover our range of financial services designed to help you achieve
+          your goals and secure your future
+        </p>
+      </div>
 
-        <div className="row g-0">
-          <div className="col-lg-6 mb-4 mb-lg-0 bg-dark ">
-            <div className="py-5 d-flex  jucon h-100 align-item-center">
-              <div className="contact-info h-100 bg-white  text-white p-4 w-80 ">
+      <div className="row g-0">
+        <div className="col-lg-6 mb-4 mb-lg-0 bg-dark ">
+          <div className="py-5 d-flex  jucon h-100 align-item-center">
+            <div className="contact-info h-100 bg-white  text-white p-4 w-80 ">
               <h3 className="mb-4 text-dark">Contact Information</h3>
 
               <div className="info-item d-flex mb-4">
@@ -66,11 +62,10 @@ const Contact4 = () => {
                 </div>
               </div>
             </div>
-            </div>
-            
           </div>
+        </div>
 
-          <div className="col-lg-6 bg-white">
+        <div className="col-lg-6 bg-white">
           <div className="py-5 d-flex jmasg">
             <div className="contact-form  p-4 bg-dark shadow w-80">
               <h3 className="mb-4 text-white">Send us a Message</h3>
@@ -145,27 +140,29 @@ const Contact4 = () => {
                 </div>
               </form>
             </div>
-            </div>
           </div>
         </div>
+      </div>
       {/* </div> */}
       <style jsx>{`
-          .w-80{
-            width:80%;
+        .w-80 {
+          width: 80%;
+        }
+        .jmasg {
+          justify-content: start;
+        }
+        .jucon {
+          justify-content: end;
+        }
+        @media (max-width: 786px) {
+          .jmasg {
+            justify-content: center;
           }
-          .jmasg{
-          justify-content:start}
-          .jucon{
-            justify-content:end;
+          .jucon {
+            justify-content: center;
           }
-             @media (max-width: 786px){
-             .jmasg{
-          justify-content:center}
-          .jucon{
-            justify-content:center;
-          }
-             }
-     `}</style>
+        }
+      `}</style>
     </section>
   );
 };

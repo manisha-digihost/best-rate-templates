@@ -55,9 +55,9 @@ const Products4 = () => {
     <section className="products-section section">
       <Container>
         <div className="text-center mb-5">
-          <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
+          {/* <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
             Our Services
-          </span>
+          </span> */}
           <h2 className="display-5 fw-bold mb-3">
             Solutions That Drive Success
           </h2>

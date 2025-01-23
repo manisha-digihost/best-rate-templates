@@ -66,9 +66,9 @@ const Testimonials4 = () => {
           </Col>
         </Row> */}
         <div className="text-center mb-5">
-          <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
+          {/* <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
             Our Testimonial
-          </span>
+          </span> */}
           <h2 className="display-5 fw-bold mb-3">
             Solutions That Drive Success
           </h2>
@@ -113,21 +113,22 @@ const Testimonials4 = () => {
         </Row>
       </Container>
       <style jsx>{`
-     .testimonial-card{
-        margin-top:60px
-      }
-     .testimonial-card .testimonial-content{}
-     .testimonial-card .testimonial-content figure{
-        position: absolute;
-        top: 12%;
-        transform: translate(54%, -40%);
-     }
-        @media (max-width: 786px){
-        .testimonial-card .testimonial-content figure{
-              transform: translate(85%, -30%);
+        .testimonial-card {
+          margin-top: 60px;
         }
+        .testimonial-card .testimonial-content {
         }
-     `}</style>
+        .testimonial-card .testimonial-content figure {
+          position: absolute;
+          top: 12%;
+          transform: translate(54%, -40%);
+        }
+        @media (max-width: 786px) {
+          .testimonial-card .testimonial-content figure {
+            transform: translate(85%, -30%);
+          }
+        }
+      `}</style>
     </section>
   );
 };
