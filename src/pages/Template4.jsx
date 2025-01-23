@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header2 from "../layout/Header/Header2";
-import Footer2 from "../layout/Footer/Footer2";
+import Footer4 from "../layout/Footer/Footer4";
 import About4 from "../components/About/About4";
 import Contact4 from "../components/Contact/Contact4";
 import Hero4 from "../components/Hero/Hero4";
@@ -21,7 +21,7 @@ const Template4 = () => {
       <Testimonials4 />
       <Gallery4 />
       <Contact4 />
-      <Footer2 />
+      <Footer4 />
     </div>
   );
 };

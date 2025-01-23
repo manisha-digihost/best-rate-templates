@@ -11,9 +11,19 @@ const Footer1 = () => {
       <Container>
         <div className="text-center">
           {/* Company Info */}
-            <h5 className="text-white mb-3">Best Rate Website</h5>
+            <h1 className="text-white mb-3"><span className="text-primary">Best Rate</span> Website</h1>
             
-        
+            <div className="cta-3  mt-5">
+             <div className="row justify-content-center">
+              <div className="col-lg-6">
+              <div className="input-box">
+                <input className="me-2" type="text" name="" id="" placeholder="abc@gmail.com"/>
+                <button type="button">Submit</button>
+              </div>
+              </div>
+             </div>
+           
+            </div>
             <ul className="list-unstyled d-flex justify-content-center mt-5" style={{gap:"20px"}}>
               <li className="mb-2">
                 <a href="#!" className="text-white text-decoration-none">Home</a>
@@ -36,23 +46,7 @@ const Footer1 = () => {
             </div>
       
 
-          {/* Contact Info */}
-          {/* <div className="col-lg-4 mb-4">
-            <h5 className="text-white mb-3">Contact Us</h5>
-            <div className="d-flex align-items-center mb-3 text-white">
-              <IoMdMail className="me-2" />
-              <span>info@bestratewebsite.com</span>
-            </div>
-            <div className="d-flex align-items-center mb-3 text-white">
-              <IoCall className="me-2" />
-              <span>+1 (555) 123-4567</span>
-            </div>
-            <address className="text-white mb-0">
-              123 Business Street<br />
-              New York, NY 10001<br />
-              United States
-            </address>
-          </div> */}
+      
         </div>
 
         {/* Copyright */}
@@ -62,6 +56,37 @@ const Footer1 = () => {
             © {new Date().getFullYear()} Best Rate Website. All rights reserved.
           </p>
         </div>
+        <style jsx>{`
+      
+         
+          .cta-3 .input-box input{
+            width:60%;
+            padding:8px 10px;
+            border-radius:10px;
+            background-color:#fff !important;
+            box-shadow:none;
+            outline:none;
+            border:none;
+          }
+          .cta-3 .input-box button{
+            width:30%;
+            padding:8px 5px;
+            border-radius: 10px;
+            background-color:#fff ;
+            box-shadow:none;
+            outline:none;
+            border:1px solid #0077be;
+            transition: all .3s linear
+          }
+            .cta-3 .input-box button:hover{
+            background-color: #0077be !important;
+            box-shadow:0px 0px 13px #fff;
+            color:#fff;
+          }
+          .best{
+            font-weight: 700;
+          }
+     `}</style>
     </footer>
   );
 };
