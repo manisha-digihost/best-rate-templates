@@ -33,11 +33,11 @@ const Header = () => {
               Contact Us
             </Link>
             {/* <Link to="base-template-2">Template2</Link> */}
+            <Link to="base-template-1" className="mx-2 nav-link">
+              Template1
+            </Link>
             <Link to="base-template-2" className="mx-2 nav-link">
               Template2
-            </Link>
-            <Link to="base-template-3" className="mx-2 nav-link">
-              Template3
             </Link>
             {/* <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
