@@ -1,27 +1,27 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer4 from "../layout/Footer/Footer4";
-import About4 from "../components/About/About4";
-import Contact4 from "../components/Contact/Contact4";
-import Hero4 from "../components/Hero/Hero4";
-import USPS4 from "../components/USPS/USPS4";
-import Products4 from "../components/Products/Products4";
-import Gallery4 from "../components/Gallery/Gallery4";
-import Testimonials4 from "../components/Testimonials/Testimonials4";
+import Footer2 from "../layout/Footer/Footer2";
+import About3 from "../components/About/About3";
+import Contact1 from "../components/Contact/Contact1";
+import Hero3 from "../components/Hero/Hero3";
+import USPS1 from "../components/USPS/USPS1";
+import Products3 from "../components/Products/Products3";
+import Gallery2 from "../components/Gallery/Gallery2";
+import Testimonials2 from "../components/Testimonials/Testimonials2";
 import Header2 from "../layout/Header/Header2";
 
 const Template5 = () => {
   return (
     <div>
       <Header2 />
-      <Hero4 />
-      <USPS4 />
-      <About4 />
-      <Products4 />
-      <Testimonials4 />
-      <Gallery4 />
-      <Contact4 />
-      <Footer4 />
+      <Hero3 />
+      <USPS1 />
+      <About3 />
+      <Products3 />
+      <Testimonials2 />
+      <Gallery2 />
+      <Contact1 />
+      <Footer2 />
     </div>
   );
 };

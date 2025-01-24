@@ -27,25 +27,38 @@ function Hero3() {
                   <Row className="g-4">
                     <Col md={4}>
                       <div className="feature-card bg-white bg-opacity-10 p-4 rounded-3 text-white">
-                        <FaChartLine className="feature-icon mb-3" size={24} />
+                        <FaChartLine
+                          className="feature-icon mb-3 text-primary"
+                          size={24}
+                        />
                         <h5 className="mb-2">Investment</h5>
-                        <p className="small mb-0">
+                        <p className="small mb-0 text-light-alt">
                           Strategic portfolio management
                         </p>
                       </div>
                     </Col>
                     <Col md={4}>
                       <div className="feature-card bg-white bg-opacity-10 p-4 rounded-3 text-white">
-                        <FaHandshake className="feature-icon mb-3" size={24} />
+                        <FaHandshake
+                          className="feature-icon mb-3 text-primary"
+                          size={24}
+                        />
                         <h5 className="mb-2">Guidance</h5>
-                        <p className="small mb-0">Professional consultation</p>
+                        <p className="small mb-0 text-light-alt">
+                          Professional consultation
+                        </p>
                       </div>
                     </Col>
                     <Col md={4}>
                       <div className="feature-card bg-white bg-opacity-10 p-4 rounded-3 text-white">
-                        <FaShieldAlt className="feature-icon mb-3" size={24} />
+                        <FaShieldAlt
+                          className="feature-icon mb-3 text-primary"
+                          size={24}
+                        />
                         <h5 className="mb-2">Secure Future</h5>
-                        <p className="small mb-0">Risk management solutions</p>
+                        <p className="small mb-0 text-light-alt">
+                          Risk management solutions
+                        </p>
                       </div>
                     </Col>
                   </Row>

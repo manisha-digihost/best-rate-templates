@@ -53,13 +53,13 @@ const Products3 = () => {
           {services.map((service, index) => (
             <Col lg={4} md={6} key={index}>
               <div className="service-card h-100">
-                <div className="service-icon">{service.icon}</div>
+                <div className="service-icon bg-primary">{service.icon}</div>
                 <h3 className="h4 mb-3">{service.title}</h3>
                 <p className="text-muted mb-4">{service.description}</p>
                 <ul className="feature-list">
                   {service.features.map((feature, idx) => (
                     <li key={idx}>
-                      <span className="check">✓</span>
+                      <span className="check text-primary">✓</span>
                       {feature}
                     </li>
                   ))}
