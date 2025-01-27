@@ -10,11 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@gsap/react": "^2.1.2",
-=======
     "aos": "^2.3.4",
->>>>>>> 7e91d8e3901f6354d058273fa445fd1c3292faaa
     "bootstrap": "^5.3.3",
     "lenis": "^1.1.20",
     "lightgallery": "^2.8.2",
