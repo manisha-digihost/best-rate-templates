@@ -1,23 +1,19 @@
 import React from "react";
 import { IoLocationSharp, IoMail, IoCall } from "react-icons/io5";
 import { LuClock4 } from "react-icons/lu";
+import contactbg from "./../../assets/images/contact-bg.webp"
 
 const Contact2 = () => {
   return (
     <section
       className="contact-section section bg-light-alt"
       style={{
-        // backgroundImage: "url('https://i.pinimg.com/736x/57/02/19/570219a214a9012b26bb42a7ca216591.jpg')",
-        // backgroundPosition: "center center",
-        // backgroundRepeat: "no-repeat",
-        // backgroundSize: "cover",
         position: "relative",
       }}
     >
       <div
         style={{
-          backgroundImage:
-            "url('https://i.pinimg.com/736x/57/02/19/570219a214a9012b26bb42a7ca216591.jpg')", // Adjust opacity (0.5 is 50% opacity)
+          backgroundImage:`url(${contactbg})`, // Adjust opacity (0.5 is 50% opacity)
           position: "absolute",
           top: 0,
           left: 0,
@@ -36,18 +32,9 @@ const Contact2 = () => {
           zIndex: 111,
         }}
       >
-        {/* <div className="row justify-content-center text-center mb-5">
-          <div className="col-lg-6">
-            <span className="subtitle text-primary">Contact Us</span>
-            <h2 className="title">Let's Start a Conversation</h2>
-            <p className="text-muted">
-              Have questions? We're here to help and would love to hear from
-              you.
-            </p>
-          </div>
-        </div> */}
 
-        <div className="text-center mb-5">
+        <div className="text-center mb-5" data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom">
           <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
             Contact Us
           </span>
@@ -61,52 +48,10 @@ const Contact2 = () => {
         </div>
 
         <div className="row align-items-stretch justify-content-center">
-          {/* <div className="col-lg-4 mb-4 mb-lg-0">
-            <div className="contact-info h-100 bg-dark text-white p-4 rounded-3">
-              <h3 className="mb-4 text-white">Contact Information</h3>
-
-              <div className="info-item d-flex mb-4">
-                <IoLocationSharp className="contact-icon me-3" size={24} />
-                <div>
-                  <h6 className="text-white mb-1">Our Location</h6>
-                  <p className="mb-0 text-light-alt">
-                    3481 Melrose Place, Beverly Hills
-                  </p>
-                </div>
-              </div>
-
-              <div className="info-item d-flex mb-4">
-                <IoMail className="contact-icon me-3" size={24} />
-                <div>
-                  <h6 className="text-white mb-1">Email Address</h6>
-                  <p className="mb-0 text-light-alt">Info@example.com</p>
-                </div>
-              </div>
-
-              <div className="info-item d-flex mb-4">
-                <IoCall className="contact-icon me-3" size={24} />
-                <div>
-                  <h6 className="text-white mb-1">Phone Number</h6>
-                  <p className="mb-0 text-light-alt">(+1) 517 397 7100</p>
-                </div>
-              </div>
-
-              <div className="info-item d-flex">
-                <LuClock4 className="contact-icon me-3" size={24} />
-                <div>
-                  <h6 className="text-white mb-1">Working Hours</h6>
-                  <p className="mb-0 text-light-alt">
-                    Monday - Friday: 8:00 AM - 4:00 PM
-                    <br />
-                    Saturday: 10:00 AM - 2:00 PM
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
           <div className="col-lg-8">
-            <div className="contact-form bg-white p-4 rounded-3 shadow">
+            <div className="contact-form bg-white p-4 rounded-3 shadow" data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine">
               <h3 className="mb-4">Send us a Message</h3>
               <form name="contactForm" method="post" action="contact.php">
                 <div className="row g-4">

@@ -5,7 +5,8 @@ const USPS2 = () => {
   return (
     <section className="usps section bg-light-alt">
       <div className="container">
-        <div className="text-center mb-5">
+        <div className="text-center mb-5" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
           <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
             Our Benefits
           </span>
@@ -17,7 +18,9 @@ const USPS2 = () => {
 
         <div className="row g-4">
           <div className="col-md-4">
-            <div className="card border-0 shadow-sm h-100 hover-translate">
+            <div className="card border-0 shadow-sm h-100 hover-translate"  data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
               <div className="card-body p-4">
                 <div className="text-primary mb-4">
                   <FaAward size={42} />
@@ -32,7 +35,9 @@ const USPS2 = () => {
           </div>
 
           <div className="col-md-4">
-            <div className="card border-0 shadow-sm h-100 hover-translate">
+            <div className="card border-0 shadow-sm h-100 hover-translate"  data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
               <div className="card-body p-4">
                 <div className="text-primary mb-4">
                   <FaClock size={42} />
@@ -47,7 +52,9 @@ const USPS2 = () => {
           </div>
 
           <div className="col-md-4">
-            <div className="card border-0 shadow-sm h-100 hover-translate">
+            <div className="card border-0 shadow-sm h-100 hover-translate"  data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
               <div className="card-body p-4">
                 <div className="text-primary mb-4">
                   <FaHeadset size={42} />

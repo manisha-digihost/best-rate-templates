@@ -6,16 +6,22 @@ import { Container, Row, Col } from "react-bootstrap";
 import Masonry, {
   ResponsiveMasonry,
 } from "https://cdn.skypack.dev/react-responsive-masonry@2.1.0";
+import gallery1 from "./../../assets/images/gallery/gallery1.webp"
+import gallery2 from "./../../assets/images/gallery/gallery2.webp"
+import gallery3 from "./../../assets/images/gallery/gallery3.webp"
+import gallery4 from "./../../assets/images/gallery/gallery4.webp"
+import gallery5 from "./../../assets/images/gallery/gallery5.webp"
+import gallery7 from "./../../assets/images/gallery/gallery7.webp"
 
 const Gallery2 = () => {
   const images = [
-    "https://cdn.pixabay.com/photo/2020/11/01/19/41/autumn-5704791_1280.jpg",
-    "https://cdn.pixabay.com/photo/2020/07/27/02/30/hands-5441201_1280.jpg",
-    "https://cdn.pixabay.com/photo/2020/09/27/04/15/cat-5605615_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2020/11/08/09/41/deer-5723225_1280.jpg",
-    "https://cdn.pixabay.com/photo/2020/11/15/22/08/person-5747420_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2020/11/08/09/41/deer-5723225_1280.jpg",
-    "https://cdn.pixabay.com/photo/2020/03/14/21/56/wine-4931923_1280.jpg",
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery4,
+    gallery7,
     // "https://cdn.pixabay.com/photo/2020/04/19/12/26/thread-5063401_1280.jpg",
     // "https://cdn.pixabay.com/photo/2020/07/11/11/34/mam-tor-5393685_1280.jpg",
     // "https://cdn.pixabay.com/photo/2020/03/14/21/56/wine-4931923_1280.jpg",
@@ -27,7 +33,8 @@ const Gallery2 = () => {
   return (
     <section className="gallery section">
       <Container>
-        <div className="text-center mb-5">
+        <div className="text-center mb-5" data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom">
           <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
             Our Gallery
           </span>
@@ -40,9 +47,11 @@ const Gallery2 = () => {
           </p>
         </div>
         <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
-          <Masonry gutter={4}>
+          <Masonry gutter={4} >
             {images.map((image) => (
-              <img src={image} />
+              <img src={image} data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"/>
             ))}
           </Masonry>
         </ResponsiveMasonry>
