@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 function Hero2() {
+
   return (
     <section id="home" className="hero-section hero-3">
       <div className="hero-image">
@@ -9,18 +10,18 @@ function Hero2() {
         <Container className="h-100">
           <Row className="h-100 align-items-center">
             <Col lg={6} className="text-white">
-              <div className="hero-content animate__animated animate__fadeInLeft">
-                <span className="text-primary text-uppercase fw-bold mb-3 d-block">
+              <div className="hero-content animate__animated animate__fadeInLeft" >
+                <span className="text-primary text-uppercase fw-bold mb-3 d-block" data-aos="fade-up">
                   Welcome to Best Rate
                 </span>
-                <h1 className="display-3 fw-bold mb-4">
+                <h1 className="display-3 fw-bold mb-4" data-aos="fade-up">
                   Professional Financial Services
                 </h1>
-                <p className="lead mb-5 text-light-alt">
+                <p className="lead mb-5 text-light-alt" data-aos="fade-up">
                   Expert guidance to help you achieve your financial goals. Join
                   our satisfied clients and experience excellence in service.
                 </p>
-                <div className="d-flex gap-3">
+                <div className="d-flex disply-btn gap-3" data-aos="fade-up">
                   <button className="btn btn-primary btn-lg rounded-pill px-4 hover-scale">
                     Get Started
                   </button>
@@ -62,20 +63,26 @@ function Hero2() {
           transform: scale(1.05);
         }
 
-        @keyframes fadeInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
+        // @keyframes fadeInLeft {
+        //   from {
+        //     opacity: 0;
+        //     transform: translateX(-50px);
+        //   }
+        //   to {
+        //     opacity: 1;
+        //     transform: translateX(0);
+        //   }
+        // }
 
         .hero-content {
           animation: fadeInLeft 1s ease-out forwards;
         }
+          @media (max-width: 430px){
+            .disply-btn{
+              flex-direction: column;
+            }
+          }
+         
       `}</style>
     </section>
   );

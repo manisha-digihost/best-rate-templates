@@ -19,12 +19,12 @@ const Header2 = () => {
       <div className="bg-dark py-2">
         <Container>
           <div className="d-flex justify-content-between align-items-center">
-            <div className="d-flex text-white">
+            <div className="d-flex text-white top-head-menu">
               <div className="me-4">
-                <FaPhone className="me-2" />
+                <FaPhone className="me-2 call" />
                 <small>+1 234 567 890</small>
               </div>
-              <div>
+              <div className="">
                 <FaEnvelope className="me-2" />
                 <small>info@bestrate.com</small>
               </div>
@@ -101,6 +101,18 @@ const Header2 = () => {
             </button> */}
           </Navbar.Collapse>
         </Container>
+        <style jsx>{`
+        .call{
+            transform: rotate(90deg);
+        }
+          @media (max-width: 786px){
+          .top-head-menu{
+            flex-direction: column;
+          }
+              
+
+          }
+        `}</style>
       </Navbar>
     </>
   );
