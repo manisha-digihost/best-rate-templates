@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+
 const About4 = () => {
   return (
     <section className="about section position-relative py-5">
@@ -22,7 +23,7 @@ const About4 = () => {
                 <div className="stats-icon bg-primary text-white rounded-circle p-3 mb-2">
                   <h3 className="mb-0">15+</h3>
                 </div>
-                <p className="fw-bold text-dark">Years of Excellence</p>
+                <p className="fw-bold text-dark">Years of Excellence </p>
               </div>
             </div>
           </Col>
