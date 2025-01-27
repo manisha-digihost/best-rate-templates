@@ -1,18 +1,63 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 
 const About4 = () => {
+  const sectionRef = useRef(null);
+  const imageRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const image = imageRef.current;
+    const content = contentRef.current;
+
+    // Initial state
+    gsap.set(image, { x: -100, opacity: 0 });
+    gsap.set(content, { x: 100, opacity: 0 });
+
+    // Animation timeline
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    tl.to(image, {
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out"
+    })
+    .to(content, {
+      x: 0, 
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out"
+    }, "-=0.5");
+
+    // Cleanup
+    return () => {
+      tl.kill();
+    };
+  }, []);
+
   return (
-    <section className="about section position-relative py-5">
+    <section ref={sectionRef} className="about section position-relative py-5">
       <div className="decorative-shape"></div>
       <Container>
         <Row className="g-5 align-items-center">
           {/* Image with Overlayed Content */}
           <Col lg={6}>
-            <div className="image-container position-relative rounded-3 overflow-hidden shadow-lg">
+            <div ref={imageRef} className="image-container position-relative rounded-3 overflow-hidden shadow-lg">
               <img
                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3"
                 alt="Office team meeting"
@@ -27,10 +72,10 @@ const About4 = () => {
               </div>
             </div>
           </Col>
-
+          
           {/* Text Content */}
           <Col lg={6}>
-            <div className="text-content">
+            <div ref={contentRef} className="text-content">
               <h2 className="display-5 fw-bold mb-4">Our Story</h2>
               <p className="text-muted lead mb-4">
                 Over 15 years of creating innovative financial solutions, our

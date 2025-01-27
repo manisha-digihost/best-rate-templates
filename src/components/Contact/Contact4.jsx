@@ -1,6 +1,8 @@
 import React from "react";
 import { IoLocationSharp, IoMail, IoCall } from "react-icons/io5";
 import { LuClock4 } from "react-icons/lu";
+import { FaLocationDot } from "react-icons/fa6";
+
 
 const Contact4 = () => {
   return (
