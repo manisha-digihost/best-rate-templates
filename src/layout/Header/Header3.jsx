@@ -101,7 +101,7 @@ const Header3 = () => {
         .toggle-button-nav {
           box-shadow: none !important;
           outline: 0 !important;
-          border: 0;
+          border: 0 !important;
         }
       `}</style>
     </header>
