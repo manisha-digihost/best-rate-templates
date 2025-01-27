@@ -51,6 +51,7 @@ const Gallery2 = () => {
             {images.map((image) => (
               <img src={image} data-aos="fade-right"
               data-aos-offset="300"
+              alt="gallery img"
               data-aos-easing="ease-in-sine"/>
             ))}
           </Masonry>
