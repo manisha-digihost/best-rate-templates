@@ -24,8 +24,11 @@ const Template2 = () => {
       duration: 1000, // Animation duration in milliseconds
       easing: "ease-in-out", // Animation easing
       offset: 100, // Trigger animation 100px before the element is in view
-      once: true, // Whether animation should happen only once or every time you scroll
+      once: true, // Animation happens only once
+      disable: "mobile", // Disable AOS animations on mobile devices
     });
+
+    return () => AOS.refresh(); // Refresh animations on component unmount
   }, []);
   return (
     <div>
