@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaChartLine, FaHandshake, FaShieldAlt } from "react-icons/fa";
+import { motion } from "motion/react";
 
 function Hero3() {
   return (
@@ -10,23 +11,43 @@ function Hero3() {
           <Row className="align-items-center min-vh-100">
             <Col lg={7} className="order-2 order-lg-1">
               <div className="hero-content">
-                <div className="badge bg-primary px-3 py-2 rounded-pill mb-3">
+                <motion.div
+                  className="badge bg-primary px-3 py-2 rounded-pill mb-3"
+                  animate={{ x: 0, opacity: 1 }}
+                  initial={{ x: -80, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 1 }}
+                >
                   Trusted Financial Partner
-                </div>
-                <h1 className="display-4 fw-bold text-white mb-4">
+                </motion.div>
+                <motion.h1
+                  className="display-4 fw-bold text-white mb-4"
+                  animate={{ x: 0, opacity: 1 }}
+                  initial={{ x: -80, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 1.1 }}
+                >
                   Smart Solutions for Your{" "}
                   <span className="text-primary">Financial Growth</span>
-                </h1>
-                <p className="lead text-light mb-5">
+                </motion.h1>
+                <motion.p
+                  className="lead text-light mb-5"
+                  animate={{ x: 0, opacity: 1 }}
+                  initial={{ x: -80, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 1.2 }}
+                >
                   We provide comprehensive financial planning and investment
                   strategies to help secure your future and maximize your wealth
                   potential.
-                </p>
+                </motion.p>
 
                 <div className="hero-features mb-5">
                   <Row className="g-4">
                     <Col md={4}>
-                      <div className="feature-card bg-white bg-opacity-10 p-4 rounded-3 text-white">
+                      <motion.div
+                        className="feature-card bg-white bg-opacity-10 p-4 rounded-3 text-white"
+                        animate={{ scale: 1, opacity: 1 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        transition={{ type: "tween", duration: 1, delay: 1.3 }}
+                      >
                         <FaChartLine
                           className="feature-icon mb-3 text-primary"
                           size={24}
@@ -35,10 +56,15 @@ function Hero3() {
                         <p className="small mb-0 text-light-alt">
                           Strategic portfolio management
                         </p>
-                      </div>
+                      </motion.div>
                     </Col>
                     <Col md={4}>
-                      <div className="feature-card bg-white bg-opacity-10 p-4 rounded-3 text-white">
+                      <motion.div
+                        className="feature-card bg-white bg-opacity-10 p-4 rounded-3 text-white"
+                        animate={{ scale: 1, opacity: 1 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        transition={{ type: "tween", duration: 1, delay: 1.4 }}
+                      >
                         <FaHandshake
                           className="feature-icon mb-3 text-primary"
                           size={24}
@@ -47,10 +73,15 @@ function Hero3() {
                         <p className="small mb-0 text-light-alt">
                           Professional consultation
                         </p>
-                      </div>
+                      </motion.div>
                     </Col>
                     <Col md={4}>
-                      <div className="feature-card bg-white bg-opacity-10 p-4 rounded-3 text-white">
+                      <motion.div
+                        className="feature-card bg-white bg-opacity-10 p-4 rounded-3 text-white"
+                        animate={{ scale: 1, opacity: 1 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        transition={{ type: "tween", duration: 1, delay: 1.5 }}
+                      >
                         <FaShieldAlt
                           className="feature-icon mb-3 text-primary"
                           size={24}
@@ -59,30 +90,40 @@ function Hero3() {
                         <p className="small mb-0 text-light-alt">
                           Risk management solutions
                         </p>
-                      </div>
+                      </motion.div>
                     </Col>
                   </Row>
                 </div>
 
-                <div className="d-flex gap-3 flex-column flex-sm-row">
+                <motion.div
+                  className="d-flex gap-3 flex-column flex-sm-row"
+                  animate={{ x: 0, opacity: 1 }}
+                  initial={{ x: -80, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 1.6 }}
+                >
                   <button className="btn btn-primary btn-lg px-4 py-3 rounded-3">
                     Schedule Consultation
                   </button>
                   <button className="btn btn-outline-light btn-lg px-4 py-3 rounded-3">
                     View Services
                   </button>
-                </div>
+                </motion.div>
               </div>
             </Col>
             <Col lg={5} className="order-1 order-lg-2 mb-5 mb-lg-0">
               <div className="hero-image-wrapper">
-                <div className="hero-image-content text-center">
+                <motion.div
+                  className="hero-image-content text-center"
+                  animate={{ x: 0, opacity: 1 }}
+                  initial={{ x: 80, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 1.5 }}
+                >
                   <img
                     src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3"
                     alt="Financial Analysis"
                     className="img-fluid rounded-4 shadow-lg"
                   />
-                </div>
+                </motion.div>
               </div>
             </Col>
           </Row>

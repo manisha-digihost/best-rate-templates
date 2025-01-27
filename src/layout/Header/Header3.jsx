@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { FaPhoneAlt, FaEnvelope, FaSearch, FaUserCircle } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const Header3 = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +24,12 @@ const Header3 = () => {
   }, []);
 
   return (
-    <header className={`header-3 ${isScrolled ? "scrolled" : ""}`}>
+    <motion.header
+      className={`header-3 ${isScrolled ? "scrolled" : ""}`}
+      animate={{ y: 0, opacity: 1 }}
+      initial={{ y: -100, opacity: 0 }}
+      transition={{ type: "tween", duration: 1, delay: 1 }}
+    >
       {/* Contact Bar */}
       <div className="bg-primary py-1">
         <Container>
@@ -104,7 +110,7 @@ const Header3 = () => {
           border: 0 !important;
         }
       `}</style>
-    </header>
+    </motion.header>
   );
 };
 
