@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { motion } from "motion/react";
 
 const Gallery3 = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -61,7 +62,12 @@ const Gallery3 = () => {
 
   return (
     <Container className="py-5">
-      <div className="text-center mb-5">
+      <motion.div
+        className="text-center mb-5"
+        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ y: -80, opacity: 0 }}
+        transition={{ type: "tween", duration: 1, delay: 1 }}
+      >
         <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
           Our Gallery
         </span>
@@ -70,7 +76,7 @@ const Gallery3 = () => {
           Discover our range of financial services designed to help you achieve
           your goals and secure your future
         </p>
-      </div>
+      </motion.div>
       <Row className="text-center mb-4">
         <Col>
           {filters.map((filter) => (
