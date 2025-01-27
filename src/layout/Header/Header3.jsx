@@ -27,7 +27,7 @@ const Header3 = () => {
       {/* Contact Bar */}
       <div className="bg-primary py-1">
         <Container>
-          <div className="d-flex justify-content-between align-items-center">
+          <div className="d-flex justify-content-between align-items-center flex-md-row flex-column">
             <div className="contact-info d-flex">
               <a href="tel:+1234567890" className="text-white me-4">
                 <FaPhoneAlt className="me-2" size={12} />
@@ -59,7 +59,10 @@ const Header3 = () => {
             </span>
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="main-nav" />
+          <Navbar.Toggle
+            aria-controls="main-nav"
+            className="toggle-button-nav"
+          />
 
           <Navbar.Collapse id="main-nav">
             <Nav className="mx-auto">
@@ -94,6 +97,12 @@ const Header3 = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <style jsx>{`
+        .toggle-button-nav {
+          box-shadow: none !important;
+          outline: 0 !important;
+        }
+      `}</style>
     </header>
   );
 };
