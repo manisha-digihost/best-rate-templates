@@ -3,6 +3,7 @@ import Slider from "react-slick"; // Import Slider component from react-slick
 import "slick-carousel/slick/slick.css"; // Import Slick CSS
 import "slick-carousel/slick/slick-theme.css"; // Import Slick Theme CSS
 import { Container } from "react-bootstrap";
+
 const Gallery4 = () => {
   const settings = {
     dots: true,
@@ -25,25 +26,23 @@ const Gallery4 = () => {
       {
         breakpoint: 1024, // For devices with width < 1024px
         settings: {
-          slidesToShow: 3, // Show 2 slides on tablet
+          slidesToShow: 3, // Show 3 slides on tablet
         },
       },
     ],
   };
 
-  const images = [
-    "https://cdn.pixabay.com/photo/2020/11/01/19/41/autumn-5704791_1280.jpg",
-    "https://cdn.pixabay.com/photo/2020/07/27/02/30/hands-5441201_1280.jpg",
-    "https://cdn.pixabay.com/photo/2020/11/08/09/41/deer-5723225_1280.jpg",
-    "https://cdn.pixabay.com/photo/2020/03/14/21/56/wine-4931923_1280.jpg",
+  const videos = [
+    "https://www.w3schools.com/html/mov_bbb.mp4",
+    "https://www.w3schools.com/html/mov_bbb.mp4",
+    "https://www.w3schools.com/html/mov_bbb.mp4",
+    "https://www.w3schools.com/html/mov_bbb.mp4",
   ];
+
   return (
     <section className="gallery section">
       <Container>
         <div className="text-center mb-5">
-          {/* <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
-          Our Gallery
-        </span> */}
           <h2 className="display-5 fw-bold mb-3">
             Solutions That Drive Success
           </h2>
@@ -53,13 +52,17 @@ const Gallery4 = () => {
           </p>
         </div>
         <Slider {...settings}>
-          {images.map((image, index) => (
+          {videos.map((video, index) => (
             <div key={index} className="px-3">
-              <div className="text-center  bg-white shadow-sm rounded gallery-img">
-                <img
-                  src={image}
-                  alt={`Gallery item ${index + 1}`}
-                  className="img-fluid rounded "
+              <div className="text-center bg-white shadow-sm rounded gallery-video">
+                <video
+                  src={video}
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  className="img-fluid rounded"
+                  preload="metadata"
                 />
               </div>
             </div>
@@ -67,15 +70,19 @@ const Gallery4 = () => {
         </Slider>
       </Container>
       <style jsx>{`
-        .gallery-img {
+        .gallery-video {
           overflow: hidden;
+          position: relative;
+          height: 100%; /* Make sure the container respects the aspect ratio */
         }
-        .gallery-img img {
+        .gallery-video video {
+          width: 100%;
+          height: 100%; /* Ensure the video takes the full height */
+          object-fit: cover; /* Ensure the video covers the container without distortion */
           transition: all 0.3s linear;
         }
-        .gallery-img:hover img {
-          scale: 1.1;
-          overflow: hidden;
+        .gallery-video:hover video {
+          transform: scale(1.1);
         }
       `}</style>
     </section>
