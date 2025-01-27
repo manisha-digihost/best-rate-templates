@@ -8,7 +8,12 @@ const USPS3 = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-5 mb-5 mb-lg-0">
-            <div className="pe-lg-5">
+            <motion.div
+              className="pe-lg-5"
+              whileInView={{ x: 0, opacity: 1 }}
+              initial={{ x: -80, opacity: 0 }}
+              transition={{ type: "tween", duration: 1, delay: 1 }}
+            >
               <span className="badge bg-white text-primary px-3 py-2 rounded-pill mb-3">
                 Why Best Rate
               </span>
@@ -20,7 +25,7 @@ const USPS3 = () => {
                 deliver outstanding results for our clients.
               </p>
               <button className="btn btn-light btn-lg px-4">Learn More</button>
-            </div>
+            </motion.div>
           </div>
 
           <div className="col-lg-7">
@@ -28,9 +33,9 @@ const USPS3 = () => {
               <div className="col-md-6">
                 <motion.div
                   className="feature-card bg-white p-4 rounded-4 mb-4"
-                  animate={{ scale: 1, opacity: 1 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
                   initial={{ scale: 0, opacity: 0 }}
-                  transition={{ type: "tween", duration: 1, delay: 1 }}
+                  transition={{ type: "tween", duration: 1, delay: 0.4 }}
                 >
                   <div className="d-flex align-items-center mb-3">
                     <div className="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
@@ -46,9 +51,9 @@ const USPS3 = () => {
 
                 <motion.div
                   className="feature-card bg-white p-4 rounded-4"
-                  animate={{ scale: 1, opacity: 1 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
                   initial={{ scale: 0, opacity: 0 }}
-                  transition={{ type: "tween", duration: 1, delay: 1.3 }}
+                  transition={{ type: "tween", duration: 1, delay: 0.8 }}
                 >
                   <div className="d-flex align-items-center mb-3">
                     <div className="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
@@ -66,9 +71,9 @@ const USPS3 = () => {
               <div className="col-md-6 mt-md-5">
                 <motion.div
                   className="feature-card bg-white p-4 rounded-4"
-                  animate={{ scale: 1, opacity: 1 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
                   initial={{ scale: 0, opacity: 0 }}
-                  transition={{ type: "tween", duration: 1, delay: 1.6 }}
+                  transition={{ type: "tween", duration: 1, delay: 1.2 }}
                 >
                   <div className="d-flex align-items-center mb-3">
                     <div className="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">

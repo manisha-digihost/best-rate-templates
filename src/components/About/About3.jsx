@@ -6,7 +6,7 @@ import { FaChartLine, FaHandshake, FaUsers } from "react-icons/fa";
 
 const About3 = () => {
   return (
-    <section className="about-3 py-6">
+    <section className="about-3 py-6 bg-light-alt">
       <Container>
         <Row className="align-items-center mb-5">
           <Col lg={6} className="text-start text-lg-start">
