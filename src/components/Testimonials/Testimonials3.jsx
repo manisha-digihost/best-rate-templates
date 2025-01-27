@@ -53,7 +53,7 @@ const Testimonials3 = () => {
   ];
 
   return (
-    <section className="testimonials bg-light-alt section">
+    <section className="testimonials bg-light-alt section overflow-x-hidden">
       <Container>
         {/* <Row className="justify-content-center text-center mb-5">
           <Col lg={6}>
