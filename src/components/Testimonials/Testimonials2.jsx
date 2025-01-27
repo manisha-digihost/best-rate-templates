@@ -97,7 +97,7 @@ const Testimonials2 = () => {
                             overflow: "hidden",
                           }}
                           src={profile}
-                          alt=""
+                          alt="profile img"
                         />
                       </figure>
                       <h3
@@ -129,7 +129,7 @@ const Testimonials2 = () => {
                           padding: "10px",
                         }}
                         src={profile}
-                        alt=""
+                          alt="profile img"
                       />
                     </figure>
                     {/* <h3 style={{fontSize:"20px",textAlign:"center"}}>{testimonial.name}</h3> */}
