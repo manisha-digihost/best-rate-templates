@@ -1,16 +1,79 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import gsap from "gsap";
 
 function Hero4() {
+  const heroRef = useRef(null);
+  const contentRef = useRef(null);
+  const imageWrapperRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      defaults: { ease: "power3.out" }
+    });
+
+    // Initial state
+    gsap.set([".shape-1", ".shape-2"], { scale: 0, opacity: 0 });
+    gsap.set(".hero-content > *", { y: 30, opacity: 0 });
+    gsap.set(".image-card", { opacity: 0, scale: 0.8 });
+
+    // Animate shapes
+    tl.to([".shape-1", ".shape-2"], {
+      scale: 1,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.2
+    })
+
+    // Animate hero content
+    .to(".hero-content > *", {
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      stagger: 0.1
+    })
+
+    // Animate image cards
+    .to(".main-image", {
+      opacity: 1,
+      scale: 1,
+      duration: 0.8
+    })
+    .to([".card-1", ".card-2"], {
+      opacity: 1,
+      scale: 1,
+      duration: 0.6,
+      stagger: 0.2
+    });
+
+    // Hover animations for buttons
+    const buttons = document.querySelectorAll('.hero-buttons button');
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        gsap.to(button, {
+          scale: 1.05,
+          duration: 0.3
+        });
+      });
+      button.addEventListener('mouseleave', () => {
+        gsap.to(button, {
+          scale: 1,
+          duration: 0.3
+        });
+      });
+    });
+
+  }, []);
+
   return (
-    <section id="home" className="hero-section">
+    <section id="home" className="hero-section" ref={heroRef}>
       <div className="hero-background">
         <div className="shape-1"></div>
         <div className="shape-2"></div>
         <Container>
           <Row className="align-items-center min-vh-100">
             <Col lg={6}>
-              <div className="hero-content">
+              <div className="hero-content" ref={contentRef}>
                 <span className="badge bg-warning text-dark px-3 py-2 mb-4">
                   Trusted Financial Partner
                 </span>
@@ -49,7 +112,7 @@ function Hero4() {
               </div>
             </Col>
             <Col lg={6}>
-              <div className="hero-image-wrapper">
+              <div className="hero-image-wrapper" ref={imageWrapperRef}>
                 <div className="image-card main-image">
                   <img
                     src="https://img.freepik.com/free-photo/environmental-pollution-factory-exterior_23-2149057714.jpg?t=st=1737633018~exp=1737636618~hmac=5166ab686caa670b9c24d9ed157100fccf8e498b31bca2c11eaf59d273f19207&w=740"
@@ -128,6 +191,11 @@ function Hero4() {
 
         .stat-box {
           text-align: center;
+          transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+          transform: translateY(-5px);
         }
 
         .stat-box h3 {
@@ -152,6 +220,11 @@ function Hero4() {
           border-radius: 20px;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
           background: white;
+          transition: transform 0.3s ease;
+        }
+
+        .image-card:hover {
+          transform: translateY(-5px);
         }
 
         .main-image {

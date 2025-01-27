@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Hero from "../components/Hero/Hero2";
 import USPS from "../components/USPS/USPS2";
@@ -16,8 +16,20 @@ import Testimonials3 from "../components/Testimonials/Testimonials3";
 import Gallery4 from "../components/Gallery/Gallery4";
 import Testimonials2 from "../components/Testimonials/Testimonials2";
 import Gallery2 from "../components/Gallery/Gallery2";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Template2 = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Animation easing
+      offset: 100, // Trigger animation 100px before the element is in view
+      once: true, // Animation happens only once
+      disable: "mobile", // Disable AOS animations on mobile devices
+    });
+
+    return () => AOS.refresh(); // Refresh animations on component unmount
+  }, []);
   return (
     <div>
       <Header2 />

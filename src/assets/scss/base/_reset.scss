@@ -23,7 +23,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+#root{
+  overflow: hidden;
+}
 body {
   margin: 0;
   padding: 0;
