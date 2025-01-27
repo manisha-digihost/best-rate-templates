@@ -27,7 +27,7 @@ const About4 = () => {
               </div>
             </div>
           </Col>
-
+          
           {/* Text Content */}
           <Col lg={6}>
             <div className="text-content">

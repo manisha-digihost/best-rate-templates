@@ -1,5 +1,6 @@
 import React from "react";
 import { FaAward, FaClock, FaHeadset } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const USPS3 = () => {
   return (
@@ -25,7 +26,12 @@ const USPS3 = () => {
           <div className="col-lg-7">
             <div className="row g-4">
               <div className="col-md-6">
-                <div className="feature-card bg-white p-4 rounded-4 mb-4">
+                <motion.div
+                  className="feature-card bg-white p-4 rounded-4 mb-4"
+                  animate={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 1 }}
+                >
                   <div className="d-flex align-items-center mb-3">
                     <div className="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
                       <FaAward className="text-primary" size={24} />
@@ -36,9 +42,14 @@ const USPS3 = () => {
                     Recognized excellence in financial consulting and wealth
                     management solutions.
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="feature-card bg-white p-4 rounded-4">
+                <motion.div
+                  className="feature-card bg-white p-4 rounded-4"
+                  animate={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 1.3 }}
+                >
                   <div className="d-flex align-items-center mb-3">
                     <div className="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
                       <FaClock className="text-primary" size={24} />
@@ -49,11 +60,16 @@ const USPS3 = () => {
                     Swift and efficient service delivery without compromising
                     quality.
                   </p>
-                </div>
+                </motion.div>
               </div>
 
               <div className="col-md-6 mt-md-5">
-                <div className="feature-card bg-white p-4 rounded-4">
+                <motion.div
+                  className="feature-card bg-white p-4 rounded-4"
+                  animate={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 1.6 }}
+                >
                   <div className="d-flex align-items-center mb-3">
                     <div className="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
                       <FaHeadset className="text-primary" size={24} />
@@ -64,7 +80,7 @@ const USPS3 = () => {
                     Round-the-clock assistance from our dedicated financial
                     experts.
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
