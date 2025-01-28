@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaChartLine, FaHandshake, FaShieldAlt } from "react-icons/fa";
 import { motion } from "motion/react";
+import hero from "./../../assets/images/hero.jpg";
 
 function Hero3() {
   return (
@@ -119,7 +120,7 @@ function Hero3() {
                   transition={{ type: "tween", duration: 1, delay: 1.5 }}
                 >
                   <img
-                    src="src/assets/images/hero.jpg"
+                    src={hero}
                     alt="Financial Analysis"
                     className="img-fluid rounded-4 shadow-lg"
                   />
