@@ -119,7 +119,7 @@ function Hero3() {
                   transition={{ type: "tween", duration: 1, delay: 1.5 }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3"
+                    src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&w=600&h=600"
                     alt="Financial Analysis"
                     className="img-fluid rounded-4 shadow-lg"
                   />
