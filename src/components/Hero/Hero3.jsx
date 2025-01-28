@@ -142,6 +142,10 @@ function Hero3() {
           z-index: 2;
         }
 
+        .hero-wrapper h1 {
+          content-visibility: auto;
+        }
+
         .hero-wrapper::before {
           content: "";
           position: absolute;
