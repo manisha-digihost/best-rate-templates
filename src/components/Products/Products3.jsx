@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaChartLine, FaShieldAlt, FaRegHandshake } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const Products3 = () => {
   const services = [
@@ -36,23 +37,34 @@ const Products3 = () => {
       <Container>
         <Row className="justify-content-start mb-5">
           <Col lg={8} className="text-start">
-            <span className="badge bg-primary px-3 py-2 rounded-pill mb-3">
-              Our Services
-            </span>
-            <h2 className="display-4 fw-bold mb-4">
-              Comprehensive Financial Solutions
-            </h2>
-            <p className="lead text-muted">
-              We offer a wide range of financial services designed to help you
-              build, manage and protect your wealth for a secure future.
-            </p>
+            <motion.div
+              whileInView={{ x: 0, opacity: 1 }}
+              initial={{ x: -80, opacity: 0 }}
+              transition={{ type: "tween", duration: 1, delay: 0.5 }}
+            >
+              <span className="badge bg-primary px-3 py-2 rounded-pill mb-3">
+                Our Services
+              </span>
+              <h2 className="display-4 fw-bold mb-4">
+                Comprehensive Financial Solutions
+              </h2>
+              <p className="lead text-muted">
+                We offer a wide range of financial services designed to help you
+                build, manage and protect your wealth for a secure future.
+              </p>
+            </motion.div>
           </Col>
         </Row>
 
         <Row className="g-4">
           {services.map((service, index) => (
             <Col lg={4} md={6} key={index}>
-              <div className="service-card h-100">
+              <motion.div
+                className="service-card h-100"
+                whileInView={{ scale: 1, opacity: 1 }}
+                initial={{ scale: 0, opacity: 0 }}
+                transition={{ type: "tween", duration: 1, delay: 1 }}
+              >
                 <div className="service-icon bg-primary">{service.icon}</div>
                 <h3 className="h4 mb-3">{service.title}</h3>
                 <p className="text-muted mb-4">{service.description}</p>
@@ -65,7 +77,7 @@ const Products3 = () => {
                   ))}
                 </ul>
                 <button className="btn btn-primary mt-auto">Learn More</button>
-              </div>
+              </motion.div>
             </Col>
           ))}
         </Row>

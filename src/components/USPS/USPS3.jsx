@@ -1,5 +1,6 @@
 import React from "react";
 import { FaAward, FaClock, FaHeadset } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const USPS3 = () => {
   return (
@@ -7,7 +8,12 @@ const USPS3 = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-5 mb-5 mb-lg-0">
-            <div className="pe-lg-5">
+            <motion.div
+              className="pe-lg-5"
+              whileInView={{ x: 0, opacity: 1 }}
+              initial={{ x: -80, opacity: 0 }}
+              transition={{ type: "tween", duration: 1, delay: 1 }}
+            >
               <span className="badge bg-white text-primary px-3 py-2 rounded-pill mb-3">
                 Why Best Rate
               </span>
@@ -19,13 +25,18 @@ const USPS3 = () => {
                 deliver outstanding results for our clients.
               </p>
               <button className="btn btn-light btn-lg px-4">Learn More</button>
-            </div>
+            </motion.div>
           </div>
 
           <div className="col-lg-7">
             <div className="row g-4">
               <div className="col-md-6">
-                <div className="feature-card bg-white p-4 rounded-4 mb-4">
+                <motion.div
+                  className="feature-card bg-white p-4 rounded-4 mb-4"
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 0.4 }}
+                >
                   <div className="d-flex align-items-center mb-3">
                     <div className="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
                       <FaAward className="text-primary" size={24} />
@@ -36,9 +47,14 @@ const USPS3 = () => {
                     Recognized excellence in financial consulting and wealth
                     management solutions.
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="feature-card bg-white p-4 rounded-4">
+                <motion.div
+                  className="feature-card bg-white p-4 rounded-4"
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 0.8 }}
+                >
                   <div className="d-flex align-items-center mb-3">
                     <div className="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
                       <FaClock className="text-primary" size={24} />
@@ -49,11 +65,16 @@ const USPS3 = () => {
                     Swift and efficient service delivery without compromising
                     quality.
                   </p>
-                </div>
+                </motion.div>
               </div>
 
               <div className="col-md-6 mt-md-5">
-                <div className="feature-card bg-white p-4 rounded-4">
+                <motion.div
+                  className="feature-card bg-white p-4 rounded-4"
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  transition={{ type: "tween", duration: 1, delay: 1.2 }}
+                >
                   <div className="d-flex align-items-center mb-3">
                     <div className="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
                       <FaHeadset className="text-primary" size={24} />
@@ -64,7 +85,7 @@ const USPS3 = () => {
                     Round-the-clock assistance from our dedicated financial
                     experts.
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

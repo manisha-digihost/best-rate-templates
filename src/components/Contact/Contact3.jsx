@@ -1,6 +1,7 @@
 import React from "react";
 import { IoLocationSharp, IoMail, IoCall } from "react-icons/io5";
 import { LuClock4 } from "react-icons/lu";
+import { motion } from "motion/react";
 
 const Contact3 = () => {
   return (
@@ -17,7 +18,12 @@ const Contact3 = () => {
           </div>
         </div> */}
 
-        <div className="text-center mb-5">
+        <motion.div
+          className="text-center mb-5"
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ y: -80, opacity: 0 }}
+          transition={{ type: "tween", duration: 1, delay: 1 }}
+        >
           <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
             Contact Us
           </span>
@@ -28,7 +34,7 @@ const Contact3 = () => {
             Discover our range of financial services designed to help you
             achieve your goals and secure your future
           </p>
-        </div>
+        </motion.div>
 
         <div className="row align-items-stretch">
           <div className="col-lg-6">
