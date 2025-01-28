@@ -1,13 +1,16 @@
+@use "./../abstract/variables" as v;
+@use "./../abstract/mixins" as m;
+
 .about {
   padding: 70px 0;
   .about-content {
-    @media (max-width: 786px) {
-      margin-top: 15px;
-    }
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    @media (max-width: 786px) {
+      margin-top: 15px;
+    }
     p {
       color: #000;
     }

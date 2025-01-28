@@ -1,22 +1,23 @@
 // Abstract
-@import "./abstract/mixins";
-@import "./abstract/variables";
+// @use "./abstract/mixins" as mx;
+// @use "./abstract/variables" as vr;
 
 // Base
-@import "./base/reset";
-@import "./base/utilities";
+// @use "./base/reset" as rs;
+// @use "./base/utilities" as ut;
 // Components
-@import "./components/gallery";
-@import "./components/contact";
-
+@use "./components/" as cp;
+@use "./base/" as bs;
+@use "./abstract/" as ab;
+@use "./layouts/" as ly;
 // Layouts
-@import "./layouts/navbar";
-@import "./layouts/footer";
+// @use "./layouts/navbar" as nv;
+// @use "./layouts/footer" as ft;
 
-@import "./components/hero";
+// @use "./components/hero" as hr;
 
-@import "./components/usp";
+// @use "./components/usp" as usp;
 
-@import "./components/about";
-@import "./components/product";
-@import "./components/testimonial";
+// @use "./components/about" as ab;
+// @use "./components/product" as pd;
+// @use "./components/testimonial" as tt;

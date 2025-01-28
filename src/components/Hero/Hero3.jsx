@@ -5,10 +5,10 @@ import { motion } from "motion/react";
 
 function Hero3() {
   return (
-    <section id="home" className="hero-section hero-3 py-5">
+    <section id="home" className="hero-section hero-3 section">
       <div className="hero-wrapper">
         <Container>
-          <Row className="align-items-center min-vh-100">
+          <Row className="align-items-center">
             <Col lg={7} className="order-2 order-lg-1">
               <div className="hero-content">
                 <motion.div

@@ -1,3 +1,5 @@
-p{
-    color: $dark-alt;
+@use "./../abstract/variables" as v;
+@use "./../abstract/mixins" as m;
+p {
+  color: v.$dark-alt;
 }

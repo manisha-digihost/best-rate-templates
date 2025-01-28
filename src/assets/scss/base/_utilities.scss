@@ -1,41 +1,44 @@
+@use "./../abstract/variables" as v;
+@use "./../abstract/mixins" as m;
+
 .text {
   &-primary {
-    color: $primary !important;
+    color: v.$primary !important;
   }
   &-secondary {
-    color: $primary !important;
+    color: v.$primary !important;
   }
   &-light {
-    color: $light !important;
+    color: v.$light !important;
   }
   &-light-alt {
-    color: $light-alt !important;
+    color: v.$light-alt !important;
   }
   &-dark {
-    color: $dark !important;
+    color: v.$dark !important;
   }
   &-dark-alt {
-    color: $dark-alt !important;
+    color: v.$dark-alt !important;
   }
 }
 
 .bg {
   &-primary {
-    background-color: $primary !important;
+    background-color: v.$primary !important;
   }
   &-secondary {
-    background-color: $primary !important;
+    background-color: v.$primary !important;
   }
   &-light {
-    background-color: $light !important;
+    background-color: v.$light !important;
   }
   &-light-alt {
-    background-color: $light-alt !important;
+    background-color: v.$light-alt !important;
   }
   &-dark {
-    background-color: $dark !important;
+    background-color: v.$dark !important;
   }
   &-dark-alt {
-    background-color: $dark-alt !important;
+    background-color: v.$dark-alt !important;
   }
 }

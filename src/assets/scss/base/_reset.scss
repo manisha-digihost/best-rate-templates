@@ -1,3 +1,5 @@
+@use "./../abstract/variables" as v;
+@use "./../abstract/mixins" as m;
 * {
   margin: 0;
   padding: 0;
@@ -5,32 +7,32 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scrollbar-color: $primary transparent;
+  scrollbar-color: v.$primary transparent;
   scrollbar-width: thin;
 }
 *::selection {
-  background: $primary;
-  color: $light;
+  background: v.$primary;
+  color: v.$light;
 }
 ::-webkit-scrollbar {
   width: 5px;
-  background: $dark;
+  background: v.$dark;
 }
 ::-webkit-scrollbar-thumb {
-  background: $primary;
+  background: v.$primary;
 }
 
 html {
   scroll-behavior: smooth;
 }
-#root{
+#root {
   overflow: hidden;
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: $sans-serif;
-  background: $light;
+  font-family: v.$sans-serif;
+  background: v.$light;
   overflow-x: hidden;
   position: relative;
 }
@@ -58,11 +60,11 @@ span {
 
 p {
   a {
-    color: $light-alt;
+    color: v.$light-alt;
     transition: 0.4s all ease;
 
     &:hover {
-      color: $primary;
+      color: v.$primary;
       text-decoration: none;
     }
   }
@@ -76,7 +78,7 @@ video {
 p {
   font-size: 16px;
   font-weight: 300;
-  color: $light-alt;
+  color: v.$light-alt;
   line-height: 140%;
   letter-spacing: 0.4px;
 }
@@ -88,9 +90,9 @@ p {
 }
 
 .bg-light-alt {
-  background: $light-alt;
+  background: v.$light-alt;
 }
 
 .btn-primary {
-  background-color: $primary !important;
+  background-color: v.$primary !important;
 }
