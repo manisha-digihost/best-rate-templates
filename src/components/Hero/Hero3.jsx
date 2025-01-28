@@ -122,7 +122,7 @@ function Hero3() {
                   <img
                     src={hero}
                     alt="Financial Analysis"
-                    className="img-fluid rounded-4 shadow-lg"
+                    className="img-fluid rounded-4 shadow-sm"
                   />
                 </motion.div>
               </div>
