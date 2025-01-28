@@ -26,7 +26,7 @@ const Contact4 = () => {
               <h3 className="mb-4 text-dark">Contact Information</h3>
 
               <div className="info-item d-flex mb-4">
-                <IoLocationSharp className="contact-icon me-3" size={24} />
+                <IoLocationSharp className="contact-icon me-3 text-dark" size={24} />
                 <div>
                   <h6 className="text-dark mb-1">Our Location</h6>
                   <p className="mb-0 text-dark-alt">
@@ -36,7 +36,7 @@ const Contact4 = () => {
               </div>
 
               <div className="info-item d-flex mb-4">
-                <IoMail className="contact-icon me-3" size={24} />
+                <IoMail className="contact-icon me-3 text-dark" size={24} />
                 <div>
                   <h6 className="text-dark mb-1">Email Address</h6>
                   <p className="mb-0 text-dark-alt">Info@example.com</p>
@@ -44,7 +44,7 @@ const Contact4 = () => {
               </div>
 
               <div className="info-item d-flex mb-4">
-                <IoCall className="contact-icon me-3" size={24} />
+                <IoCall className="contact-icon me-3 text-dark" size={24} />
                 <div>
                   <h6 className="text-dark mb-1">Phone Number</h6>
                   <p className="mb-0 text-dark-alt">(+1) 517 397 7100</p>
@@ -52,7 +52,7 @@ const Contact4 = () => {
               </div>
 
               <div className="info-item d-flex">
-                <LuClock4 className="contact-icon me-3" size={24} />
+                <LuClock4 className="contact-icon me-3 text-dark" size={24} />
                 <div>
                   <h6 className="text-dark mb-1">Working Hours</h6>
                   <p className="mb-0 text-dark-alt">

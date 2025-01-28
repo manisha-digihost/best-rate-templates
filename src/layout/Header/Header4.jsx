@@ -113,13 +113,13 @@ const Header4 = () => {
 
             {/* Header Icons */}
             <div className="d-flex align-items-center">
-              <button className="btn btn-link text-dark me-3">
+              <button className="btn btn-link text-dark me-3" aria-label="Facebook">
                 <FaFacebookF />
               </button>
-              <button className="btn btn-link text-dark me-3">
+              <button className="btn btn-link text-dark me-3" aria-label="Twitter">
                 <FaTwitter />
               </button>
-              <button className="btn btn-link text-dark position-relative">
+              <button className="btn btn-link text-dark position-relative" aria-label="Instagram">
                 <FaInstagram />
               </button>
             </div>
