@@ -9,13 +9,13 @@ import USPS4 from "../components/USPS/USPS4";
 import Products4 from "../components/Products/Products4";
 import Gallery4 from "../components/Gallery/Gallery4";
 import Testimonials4 from "../components/Testimonials/Testimonials4";
-import Header4 from "../layout/Header/Header4";
+import Header5 from "../layout/Header/Header5";
 
 const Template5 = () => {
   return (
     <ReactLenis root>
       <div>
-        <Header4 />
+        <Header5 />
         <Hero4 className="hero-section" />
         <USPS4 className="usps-section" />
         <About4 className="about-section" />
