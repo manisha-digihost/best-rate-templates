@@ -5,17 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
-import {
-  FaPhone,
-  FaEnvelope,
-  FaBars,
-  FaSearch,
-  FaShoppingCart,
-  FaUser,
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaBars, FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Header5 = () => {
   const [show, setShow] = useState(false);
@@ -43,7 +33,7 @@ const Header5 = () => {
       {/* Top Bar */}
       <div className="bg-primary py-1">
         <Container>
-          <div className="d-flex justify-content-between align-items-center">
+          <div className="d-flex justify-content-between al ign-items-center">
             <div className="d-none d-md-flex">
               <span className="text-white me-3">
                 <small>Free shipping on orders over $50</small>
@@ -83,7 +73,7 @@ const Header5 = () => {
             {/* Logo */}
             <Navbar.Brand href="#home" className="me-4">
               <span className="fw-bold fs-3">
-                <span className="text-primary">Best</span>Rate
+                <span className="text-primary">True</span>Buy
               </span>
             </Navbar.Brand>
 
@@ -94,44 +84,38 @@ const Header5 = () => {
                   Home
                 </Link>
                 <Link to="#about" className="nav-link px-3 fw-medium">
-                  About
+                  About us
                 </Link>
-                <NavDropdown title="Shop" id="shop-dropdown" className="px-2">
-                  <NavDropdown.Item href="#new-arrivals">
-                    New Arrivals
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#best-sellers">
-                    Best Sellers
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#sale">Sale</NavDropdown.Item>
-                </NavDropdown>
+                <Link to="#about" className="nav-link px-3 fw-medium">
+                  Categories
+                </Link>
                 <Link to="#contact" className="nav-link px-3 fw-medium">
                   Contact
                 </Link>
               </Nav>
+              <div className="d-flex align-items-center">
+                <button
+                  className="btn btn-link text-dark me-3"
+                  aria-label="Facebook"
+                >
+                  <FaFacebookF />
+                </button>
+                <button
+                  className="btn btn-link text-dark me-3"
+                  aria-label="Twitter"
+                >
+                  <FaTwitter />
+                </button>
+                <button
+                  className="btn btn-link text-dark position-relative"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
+                </button>
+              </div>
             </div>
 
             {/* Header Icons */}
-            <div className="d-flex align-items-center">
-              <button
-                className="btn btn-link text-dark me-3"
-                aria-label="Facebook"
-              >
-                <FaFacebookF />
-              </button>
-              <button
-                className="btn btn-link text-dark me-3"
-                aria-label="Twitter"
-              >
-                <FaTwitter />
-              </button>
-              <button
-                className="btn btn-link text-dark position-relative"
-                aria-label="Instagram"
-              >
-                <FaInstagram />
-              </button>
-            </div>
           </div>
 
           {/* Mobile Menu */}
