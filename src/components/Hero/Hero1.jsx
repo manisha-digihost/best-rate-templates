@@ -77,7 +77,7 @@ function Hero1() {
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              transition: "all 0.5s ease-in-out",
+              transition: "all 0.5s ease-in-out",      
             }}
           >
             <Container className="h-100 d-flex align-items-center justify-content-center text-center">
@@ -85,7 +85,7 @@ function Hero1() {
                 <h1 className="display-4 fw-bold text-primary mb-4">
                   Trusted by Thousands
                 </h1>
-                <p className="lead mb-4">
+                <p className="lead mb-4 text-dark">
                   Join our satisfied clients and experience excellence in
                   service
                 </p>

@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactLenis, useLenis } from "lenis/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header1 from "../layout/Header/Header1";
 import Footer1 from "../layout/Footer/Footer1";
@@ -10,8 +11,10 @@ import Products1 from "../components/Products/Products1";
 import Testimonials1 from "../components/Testimonials/Testimonials1";
 import Gallery1 from "../components/Gallery/Gallery1";
 
+
 const Template1 = () => {
   return (
+  <ReactLenis root>
     <div>
       <Header1 />
       <Hero1 />
@@ -23,6 +26,7 @@ const Template1 = () => {
       <Contact1 />
       <Footer1 />
     </div>
+  </ReactLenis>
   );
 };
 

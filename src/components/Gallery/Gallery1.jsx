@@ -108,7 +108,7 @@ const Gallery1 = () => {
             Explore our collection of stunning photographs that tell compelling
             stories
           </p>
-        </div>
+        </div>   
 
         <LightGallery
           onInit={onInit}
@@ -132,6 +132,7 @@ const Gallery1 = () => {
                   alt={`Gallery image ${image.id}`}
                   className="img-fluid w-100"
                   style={{ height: "400px", objectFit: "cover" }}
+                  loading="lazy"
                 />
                 <div
                   className="gallery-overlay position-absolute start-0 top-0 w-100 h-100 d-flex flex-column justify-content-end p-4 text-white"
