@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Template3 from "./pages/Template3";
 import Template4 from "./pages/Template4";
 import Template5 from "./pages/Template5";
+import Template6 from "./pages/Template6";
 import TemplateForCheck from "./pages/TemplateForCheck";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/base-template-4" element={<Template4 />} />
         <Route path="/template-for-check" element={<TemplateForCheck />} />
         <Route path="/template-5" element={<Template5 />} />
+        <Route path="/template-6" element={<Template6 />} />
       </Routes>
       {/* <Footer /> */}
     </div>
