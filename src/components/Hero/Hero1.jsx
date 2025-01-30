@@ -28,7 +28,7 @@ function Hero1() {
                 <h1 className="display-4 fw-bold text-primary mb-4">
                   Welcome to Best Rate
                 </h1>
-                <p className="lead mb-4">
+                <p className="lead mb-4 text-dark">
                   Providing the best financial solutions for your business
                   growth
                 </p>
@@ -57,7 +57,7 @@ function Hero1() {
                 <h1 className="display-4 fw-bold text-primary mb-4">
                   Professional Financial Services
                 </h1>
-                <p className="lead mb-4">
+                <p className="lead mb-4 text-dark">
                   Expert guidance to help you achieve your financial goals
                 </p>
                 <button className="btn btn-primary btn-lg rounded-pill px-5 hover-scale">

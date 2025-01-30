@@ -18,7 +18,7 @@ const USPS1 = () => {
                 <FaAward size={48} />
               </div>
               <h3 className="h4 mb-3">Quality Service</h3>
-              <p className="mb-0">
+              <p className="mb-0 text-dark">
                 We pride ourselves on delivering exceptional quality in
                 everything we do.
               </p>
@@ -31,7 +31,7 @@ const USPS1 = () => {
                 <FaClock size={48} />
               </div>
               <h3 className="h4 mb-3">Fast Delivery</h3>
-              <p className="mb-0">
+              <p className="mb-0 text-dark">
                 Quick turnaround times without compromising on quality.
               </p>
             </div>
@@ -43,7 +43,7 @@ const USPS1 = () => {
                 <FaHeadset size={48} />
               </div>
               <h3 className="h4 mb-3">24/7 Support</h3>
-              <p className="mb-0">
+              <p className="mb-0 text-dark">
                 Our dedicated team is always here to help you succeed.
               </p>
             </div>

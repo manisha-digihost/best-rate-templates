@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import gsap from "gsap";
 
-function Hero4() {
+function Hero7() {
   const heroRef = useRef(null);
   const contentRef = useRef(null);
   const imageWrapperRef = useRef(null);
@@ -294,4 +294,4 @@ function Hero4() {
   );
 }
 
-export default Hero4;
+export default Hero7;

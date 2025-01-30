@@ -65,7 +65,7 @@ const Testimonials1 = () => {
                 <div key={index} className="px-3">
                   <div className="testimonial-card text-center p-4 bg-white shadow-sm rounded">
                     <div className="testimonial-content">
-                      <p className="mb-4">{testimonial.text}</p>
+                      <p className="mb-4 text-dark">{testimonial.text}</p>
                       <h4 className="mb-1">{testimonial.name}</h4>
                       <p className="text-muted mb-0">{testimonial.role}</p>
                     </div>

@@ -28,7 +28,10 @@ const About1 = () => {
           <Col lg={7}>
             <div className="about-image position-relative">
               <div className="img-container rounded overflow-hidden shadow-lg">
-                {/* <img src="" alt="" className="img-fluid" /> */}
+                <video autoPlay muted loop className="img-fluid">
+                  <source src="https://cdn.pixabay.com/video/2023/01/13/146336-789093861_large.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
               <div className="experience-badge position-absolute bg-primary text-white p-4 rounded-circle badge-circle">
                 <h3 className="mb-0">15+</h3>
