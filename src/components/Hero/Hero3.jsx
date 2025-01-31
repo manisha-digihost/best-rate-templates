@@ -121,6 +121,7 @@ function Hero3() {
                 >
                   <img
                     src={hero}
+                    rel="preload"
                     alt="Financial Analysis"
                     className="img-fluid rounded-4 shadow-sm"
                   />
