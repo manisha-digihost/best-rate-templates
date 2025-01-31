@@ -53,7 +53,7 @@ const Testimonials6 = () => {
   ];
 
   return (
-    <section className="testimonials bg-light-alt section">
+    <section className="testimonials  section">
       <Container>
    
       

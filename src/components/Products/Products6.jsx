@@ -82,7 +82,7 @@ const Products6 = () => {
  
 
   return (
-    <section className="products-section section">
+    <section className="products-section section bg-light-alt">
       <Container>
         <div className="text-center mb-5">
           {/* <span className="px-3 py-2 rounded-pill bg-primary text-white mb-2 d-inline-block">
